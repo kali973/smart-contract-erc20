@@ -7,11 +7,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SmartContractDeploymentApplicationTests {
 
-	@Test
-	void main() {
-		//test cases added only to verify context loads with default application.properties
-		Assertions.assertEquals("Main", "M" + "a" + "i" + "n");
-	}
+    @Test
+    void main() {
+        //test cases added only to verify context loads with default application.properties
+        Assertions.assertEquals("Main", "M" + "a" + "i" + "n");
+    }
 
 
 }
