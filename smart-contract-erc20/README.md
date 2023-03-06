@@ -42,10 +42,10 @@ blockchain peut être réalisée en suivant les étapes suivantes :
     votre contrat intelligent sur la blockchain.
 
 8.  Mettez en place une interface utilisateur pour permettre aux
-    utilisateurs d\'interagir avec votre contrat intelligent. Vous
+    utilisateurs d'interagir avec votre contrat intelligent. Vous
     pouvez créer une application web ou mobile qui interagit avec votre
     contrat intelligent pour permettre aux producteurs de publier leur
-    production d\'énergie, et aux consommateurs d\'acheter de l\'énergie
+    production d'énergie, et aux consommateurs d'acheter de l'énergie
     solaire.
 ```
 ---

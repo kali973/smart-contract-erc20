@@ -5,8 +5,6 @@ Q
 !smart-contract-erc20/.env.example,6\a\6ad6d5d366d452d1af92838908ceb55c9760a747
 D
 alchemy-ui/README.md,2\3\23dfd33a346b1811ffb15d52f1bf58375f586548
-S
-#smart-contract-deployment/README.md,0\c\0c41a46a89541b56d58bf7cf1a2c66b5a8b0b472
 R
 "smart-contract-erc20/.solhint.json,8\7\87d1cf393386feb6c9a1fb28f5fa289fcfc4a39c
 V
