@@ -1,17 +1,17 @@
-# ERC20 basic sample hardhat project
+# ERC20 project
 
-This project demonstrates an basic ERC-20 Token use case, integrating other tools commonly used alongside Hardhat in the
-ecosystem.
+Ce projet illustre un cas d'utilisation de base du jeton ERC-20, intégrant d'autres outils couramment utilisés aux côtés de Hardhat dans le
+écosystème.
 
-The project comes with a contract, a test for that contract, a sample script that deploys that contract, and an example
-of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools,
-preconfigured to work with the project code.
+Le projet est fourni avec un contrat, un test pour ce contrat, un exemple de script qui déploie ce contrat et un exemple
+d'une implémentation de tâche, qui liste simplement les comptes disponibles. Il est également livré avec une variété d'autres outils,
+préconfiguré pour fonctionner avec le code du projet.
 
-The code has been sourced
+Le code a été sourcé
 from [UNDERSTAND THE ERC-20 TOKEN SMART CONTRACT](https://ethereum.org/en/developers/tutorials/understand-the-erc-20-token-smart-contract/)
 tutorial.
 
-Following tasks are pre-configured
+Les tâches suivantes sont préconfigurées
 
 ```shell
 npx hardhat accounts
@@ -34,11 +34,10 @@ npx solhint 'contracts/**/*.sol' --fix
 
 # Smart Contract Build & Test
 
-yarn needs to be installed to use the yarn commands to build the Smart Contract. However, the above hardhat tasks can
-also be used to compile and test the Smart Contract.
+yarn doit être installé pour utiliser les commandes yarn afin de créer le contrat intelligent. Cependant, les tâches de casque ci-dessus peuvent
+également être utilisé pour compiler et tester le Smart Contract.
 
-Below are yarn commands to be executed sequentially to build the Smart Contract
-
+Vous trouverez ci-dessous des commandes de fil à exécuter séquentiellement pour créer le contrat intelligent
 ```shell
 yarn install
 yarn compile
@@ -47,18 +46,16 @@ yarn test
 
 # Etherscan verification
 
-For Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan,
-such as Ropsten.
+Pour la vérification Etherscan, vous devez d'abord déployer un contrat sur un réseau Ethereum pris en charge par Etherscan, tel que Ropsten.
 
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your
-Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the
-deployment transaction. With a valid .env file in place, first deploy your contract:
+Dans ce projet, copiez le fichier .env.example dans un fichier nommé .env, puis modifiez-le pour remplir les détails. 
+Entrez votre clé API Etherscan, l'URL de votre nœud Ropsten (par exemple d'Alchemy) et la clé privée du compte qui enverra la transaction de déploiement. Avec un fichier .env valide en place, déployez d'abord votre contrat :
 
 ```shell
 yarn deploy:ropsten
 ```
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+Ensuite, copiez l'adresse de déploiement et collez-la pour remplacer `DEPLOYED_CONTRACT_ADDRESS` dans cette commande :
 
 ```shell
 npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS 10000
