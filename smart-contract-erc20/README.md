@@ -6,7 +6,7 @@
 
 La création d\'un smart contract pour l\'énergie solaire via la
 blockchain peut être réalisée en suivant les étapes suivantes :
-
+```
 1.  Choisissez la plateforme de blockchain pour votre smart contract :
     Ethereum est la plateforme la plus populaire pour les smart
     contracts, mais il existe également d\'autres options telles que
@@ -18,14 +18,14 @@ blockchain peut être réalisée en suivant les étapes suivantes :
     Vyper, un autre langage de programmation de contrat intelligent.
 
 3.  Définissez les variables pour stocker les informations nécessaires,
-    telles que l\'adresse du producteur d\'énergie, la quantité
-    d\'énergie produite et le prix de l\'énergie.
+    telles que l'adresse du producteur d'énergie, la quantité
+    d'énergie produite et le prix de l'énergie.
 
 4.  Utilisez les fonctions pour écrire la logique de votre smart
     contract. Par exemple, vous pouvez utiliser une fonction pour
-    permettre aux producteurs d\'énergie solaire de stocker leurs
+    permettre aux producteurs d'énergie solaire de stocker leurs
     informations sur la blockchain, une autre pour permettre aux
-    consommateurs d\'acheter de l\'énergie, etc.
+    consommateurs d'acheter de l'énergie, etc.
 
 5.  Utilisez des contrats intelligents existants ou créez-en de nouveaux
     pour gérer les transactions financières. Par exemple, vous pouvez
@@ -47,7 +47,7 @@ blockchain peut être réalisée en suivant les étapes suivantes :
     contrat intelligent pour permettre aux producteurs de publier leur
     production d\'énergie, et aux consommateurs d\'acheter de l\'énergie
     solaire.
-
+```
 ---
 En suivant ces étapes, vous pouvez créer un smart contract pour
 l'énergie solaire via la blockchain. Cela peut aider à faciliter les
@@ -63,18 +63,14 @@ qualité et la fiabilité de l'énergie produite.
 Pour inclure ces caractéristiques dans le smart contract, vous pouvez
 ajouter des variables pour stocker les informations sur les panneaux
 solaires utilisés pour la production d\'énergie, telles que :
-
+```
 -   La puissance nominale du panneau solaire en watts crête (Wc)
-
 -   L'efficacité du panneau solaire en pourcentage (%)
-
 -   Le nombre de panneaux solaires utilisés pour la production
     d'énergie
-
 -   La surface totale des panneaux solaires en mètres carrés (m²)
-
 -   Le fabricant et le modèle des panneaux solaires
-
+```
 Vous pouvez également utiliser des fonctions pour valider les
 informations sur les panneaux solaires, telles que vérifier si la
 puissance nominale des panneaux solaires correspond à la surface totale
