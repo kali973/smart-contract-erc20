@@ -3,5 +3,4 @@
   \ \/\/ /  / -_) | '_ \  |_ \ | || |
    \_/\_/   \___| |_.__/ |___/  \__/
 Smart Contract Deployment and Testing
-Author - Sourabh Parsekar, https://sourabhparsekar.medium.com/
 Powered by Spring Boot ${spring-boot.version}

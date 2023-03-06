@@ -1,4 +1,5 @@
 import os
+from tqdm import tqdm
 import subprocess
 import sys
 import time
@@ -17,7 +18,7 @@ filename = "nodejs_installer.msi"
 # Demander à l'utilisateur s'il souhaite installer Node.js
 answer = input("Voulez-vous installer Node.js (o/n) ? => ")
 
-if answer == "o":
+if answer.lower() == "o":
     # Télécharger le fichier d'installation de Node.js
     response = requests.get(url)
     with open(filename, "wb") as f:
@@ -31,6 +32,28 @@ if answer == "o":
     # subprocess.run(["msiexec", "/i", filename, "/quiet"])
 else:
     print("Installation annulée.")
+
+
+# Demander à l'utilisateur s'il souhaite installer hardhat
+response = input('Voulez-vous installer Hardhat ? (o/n) ')
+
+if response.lower() == 'o':
+    # Définir la commande npm
+    command = 'npm install -g hardhat'
+
+    # Définir le nombre total d'itérations
+    total_iterations = 100
+
+    # Exécuter la commande avec tqdm pour afficher la barre de progression
+    with tqdm(total=total_iterations, desc='Installation de Hardhat', unit='iteration') as pbar:
+        os.system(command)
+        pbar.update(total_iterations)
+
+    # Afficher un message de confirmation
+    print('L\'installation de Hardhat est terminée.')
+else:
+    print('Installation de Hardhat annulée.')
+
 
 subprocess.run(['pip', 'install', '--upgrade', 'pip'])
 subprocess.run(["pip", "install", "docker-compose"])

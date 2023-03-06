@@ -1,6 +1,7 @@
 import logging
 import os
 import platform
+import shlex
 import subprocess
 import sys
 import time
@@ -33,9 +34,9 @@ while number != '0':
         data += ' Hi ' + platform.uname()[1] + '\n'
     data += ' ----------------------------\n'
     data += ' Select option:\n'
-    data += ' [1] Install & Activate ActiveMQ\n'
+    data += ' [1] Install and Activate Package\n'
     data += ' [2] Launch ActiveMQ\n'
-    data += ' [3] Under Construction\n'
+    data += ' [3] Smart Contract Build\n'
     data += ' [4] Under Construction\n'
     data += ' [0] Exit\n'
     print(data)
@@ -52,7 +53,9 @@ while number != '0':
         clear()
         data = ""
     elif number == '3':
-        print("\n [***] Voltaic data entry ...\n")
+        print("\n [***] Smart Contract Build ...\n")
+        os.system('npx hardhat run ./scripts/deploy.js --network ganache')
+
         time.sleep(5)
         clear()
         data = ""

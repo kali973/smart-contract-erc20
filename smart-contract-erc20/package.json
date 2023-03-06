@@ -1,18 +1,14 @@
 {
-  "name": "hardhat-project",
+  "name": "solarix-project",
   "scripts": {
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "deploy:local": "npx hardhat run .\\scripts\\deploy.js",
-    "deploy:ganache": "npx hardhat run .\\scripts\\deploy.js --network ganache",
-    "deploy:ropsten": "npx hardhat run .\\scripts\\deploy.js --network ropsten"
+    "deploy:local": "npx hardhat run ./scripts/deploy.js",
+    "deploy:ganache": "npx hardhat run ./scripts/deploy.js --network ganache",
+    "deploy:ropsten": "npx hardhat run ./scripts/deploy.js --network ropsten"
   },
-  "author": {
-    "email": "sourabhanant@gmail.com",
-    "name": "Sourabh Parsekar",
-    "url": "https://sourabhparsekar.medium.com/"
-  },
-  "license": "MIT",
+  "author": "Gilles Coutard <gilles.coutard@outlook.fr>",
+  "license": "AFL-2.0",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^2.1.3",

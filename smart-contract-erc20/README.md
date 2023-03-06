@@ -143,12 +143,12 @@ REPORT_GAS=true npx hardhat test
 npx hardhat coverage
 npx hardhat run scripts/deploy.js
 node scripts/deploy.js
-npx eslint '**/*.js'
-npx eslint '**/*.js' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
+npx eslint "**/*.js"
+npx eslint "**/*.js" --fix
+npx prettier "**/*.{json,sol,md}" --check
+npx prettier "**/*.{json,sol,md}" --write
+npx solhint "contracts/**/*.sol"
+npx solhint "contracts/**/*.sol" --fix
 ```
 
 # Smart Contract Build & Test
@@ -156,7 +156,7 @@ npx solhint 'contracts/**/*.sol' --fix
 yarn doit être installé pour utiliser les commandes yarn afin de créer le contrat intelligent. Cependant, les tâches de casque ci-dessus peuvent
 également être utilisé pour compiler et tester le Smart Contract.
 
-Vous trouverez ci-dessous des commandes de fil à exécuter séquentiellement pour créer le contrat intelligent
+Vous trouverez ci-dessous des commandes à exécuter séquentiellement pour créer le contrat intelligent
 ```shell
 yarn install
 yarn compile
