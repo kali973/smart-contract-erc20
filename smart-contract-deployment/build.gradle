@@ -21,6 +21,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-activemq'  // ActiveMQ dependency
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -52,4 +53,3 @@ node {
     npmWorkDir = file("${project.projectDir}/src/main/node")
     workDir = file("${project.projectDir}/src/main/node")
 }
-
