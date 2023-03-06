@@ -27,18 +27,18 @@ contract Token is IERC20 {
     }
 
     function balanceOf(address tokenOwner)
-    public
-    view
-    override
-    returns (uint256)
+        public
+        view
+        override
+        returns (uint256)
     {
         return balances[tokenOwner];
     }
 
     function transfer(address receiver, uint256 numTokens)
-    public
-    override
-    returns (bool)
+        public
+        override
+        returns (bool)
     {
         require(
             numTokens <= balances[msg.sender],
@@ -51,9 +51,9 @@ contract Token is IERC20 {
     }
 
     function approve(address delegate, uint256 numTokens)
-    public
-    override
-    returns (bool)
+        public
+        override
+        returns (bool)
     {
         allowed[msg.sender][delegate] = numTokens;
         emit Approval(msg.sender, delegate, numTokens);
@@ -61,10 +61,10 @@ contract Token is IERC20 {
     }
 
     function allowance(address owner, address delegate)
-    public
-    view
-    override
-    returns (uint256)
+        public
+        view
+        override
+        returns (uint256)
     {
         return allowed[owner][delegate];
     }
