@@ -3,13 +3,13 @@ package com.ethereum.smartcontract.services;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
-import java.util.Date;
 
 public class ReadActiveMQ {
 
-    public static void ReadMessageFromActiveMQ() {
+    public static String[] ReadMessageFromActiveMQ() {
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
         Connection connection = null;
+        String[] result = new String[2];
         try {
             connection = connectionFactory.createConnection();
             connection.start();
@@ -21,13 +21,21 @@ public class ReadActiveMQ {
             Message message = consumer.receive();
             if (message instanceof TextMessage) {
                 TextMessage textMessage = (TextMessage) message;
-                String messageDetails = "Received TextMessage with contents: " + textMessage.getText() +
-                        ", JMSMessageID: " + textMessage.getJMSMessageID() +
-                        ", JMSTimestamp: " + new Date(textMessage.getJMSTimestamp()).toString() +
-                        ", JMSExpiration: " + textMessage.getJMSExpiration();
-                System.out.println(messageDetails);
+                String payload = textMessage.getText();
+                String[] tokens = payload.split(",\\s*");
+                String privateKeyToken = tokens[0].trim();
+                String defaultSupplyToken = tokens[1].trim();
+                String privateKey = privateKeyToken.split(":\\s*")[1].trim();
+                long defaultSupply = Long.parseLong(defaultSupplyToken.split(":\\s*")[1].trim().replace("L", ""));
+
+                System.out.println("Private Key: " + privateKey);
+                System.out.println("Default Supply: " + defaultSupply);
+
+                result[0] = privateKey;
+                result[1] = String.valueOf(defaultSupply);
+
             } else {
-                System.out.println("Received message: " + message);
+                System.out.println("Message reçu: " + message);
             }
 
             consumer.close();
@@ -44,5 +52,6 @@ public class ReadActiveMQ {
                 }
             }
         }
+        return result;
     }
 }

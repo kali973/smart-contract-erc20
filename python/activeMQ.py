@@ -1,10 +1,9 @@
 import os
-from tqdm import tqdm
+import requests
 import subprocess
 import sys
 import time
-
-import requests
+from tqdm import tqdm
 
 # exécute la commande pip install --upgrade pip et install yarn et npn
 # subprocess.call(['npm', 'install', '--global', 'yarn'])
@@ -33,7 +32,6 @@ if answer.lower() == "o":
 else:
     print("Installation annulée.")
 
-
 # Demander à l'utilisateur s'il souhaite installer hardhat
 response = input('Voulez-vous installer Hardhat ? (o/n) ')
 
@@ -53,7 +51,6 @@ if response.lower() == 'o':
     print('L\'installation de Hardhat est terminée.')
 else:
     print('Installation de Hardhat annulée.')
-
 
 subprocess.run(['pip', 'install', '--upgrade', 'pip'])
 subprocess.run(["pip", "install", "docker-compose"])

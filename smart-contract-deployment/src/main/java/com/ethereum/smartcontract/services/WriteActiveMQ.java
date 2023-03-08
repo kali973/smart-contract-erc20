@@ -6,7 +6,7 @@ import javax.jms.*;
 
 public class WriteActiveMQ {
 
-    public static void WriteMessageToActiveMQ(String password, String filename) {
+    public static void WriteMessageToActiveMQ(String privateKey, String defaultSupply) {
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
         Connection connection = null;
         try {
@@ -17,7 +17,7 @@ public class WriteActiveMQ {
             Destination destination = session.createQueue("solarix-activemq-queue");
             MessageProducer producer = session.createProducer(destination);
 
-            String messageContent = "Password: " + password + ", Filename: " + filename;
+            String messageContent = "Private Key: " + privateKey + ", Default Supply: " + defaultSupply;
             TextMessage message = session.createTextMessage(messageContent);
             producer.send(message);
 

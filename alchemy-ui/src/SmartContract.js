@@ -1,13 +1,12 @@
-import React from "react";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {
     connectWallet,
+    getAccountBalance,
     getCurrentWalletConnected,
+    loadContractDecimals,
     loadContractName,
     loadContractSymbol,
     loadContractTotalSupply,
-    loadContractDecimals,
-    getAccountBalance,
     transferBalance
 } from "./util/interact.js";
 

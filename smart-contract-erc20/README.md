@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 ---
 
@@ -6,6 +6,7 @@
 
 La création d\'un smart contract pour l\'énergie solaire via la
 blockchain peut être réalisée en suivant les étapes suivantes :
+
 ```
 1.  Choisissez la plateforme de blockchain pour votre smart contract :
     Ethereum est la plateforme la plus populaire pour les smart
@@ -48,6 +49,7 @@ blockchain peut être réalisée en suivant les étapes suivantes :
     production d'énergie, et aux consommateurs d'acheter de l'énergie
     solaire.
 ```
+
 ---
 En suivant ces étapes, vous pouvez créer un smart contract pour
 l'énergie solaire via la blockchain. Cela peut aider à faciliter les
@@ -63,6 +65,7 @@ qualité et la fiabilité de l'énergie produite.
 Pour inclure ces caractéristiques dans le smart contract, vous pouvez
 ajouter des variables pour stocker les informations sur les panneaux
 solaires utilisés pour la production d\'énergie, telles que :
+
 ```
 -   La puissance nominale du panneau solaire en watts crête (Wc)
 -   L'efficacité du panneau solaire en pourcentage (%)
@@ -71,6 +74,7 @@ solaires utilisés pour la production d\'énergie, telles que :
 -   La surface totale des panneaux solaires en mètres carrés (m²)
 -   Le fabricant et le modèle des panneaux solaires
 ```
+
 Vous pouvez également utiliser des fonctions pour valider les
 informations sur les panneaux solaires, telles que vérifier si la
 puissance nominale des panneaux solaires correspond à la surface totale
@@ -82,6 +86,7 @@ consommateurs savent exactement ce qu'ils achètent.
 
 Le smart contract pour l'énergie solaire via la blockchain peut inclure
 les fonctionnalités suivantes :
+
 ```
 1.  Variables pour stocker les informations nécessaires, telles que
     l'adresse du producteur d'énergie, la quantité d'énergie produite
@@ -111,19 +116,22 @@ les fonctionnalités suivantes :
     utilisateurs d'interagir avec le smart contract et d'acheter de
     l'énergie solaire.
 ```
+
 En incluant ces fonctionnalités dans le smart contract, les producteurs
 et les consommateurs peuvent faciliter les transactions liées à
 l'énergie solaire via la blockchain, garantir la qualité et la
 fiabilité de l'énergie produite, ainsi que promouvoir l'utilisation de
 l'énergie renouvelable.
 
-
 # ERC20 project Blockchain
-Ce projet illustre un cas d'utilisation de base du jeton ERC-20, intégrant d'autres outils couramment utilisés aux côtés de Hardhat dans le
+
+Ce projet illustre un cas d'utilisation de base du jeton ERC-20, intégrant d'autres outils couramment utilisés aux côtés
+de Hardhat dans le
 écosystème.
 
 Le projet est fourni avec un contrat, un test pour ce contrat, un exemple de script qui déploie ce contrat et un exemple
-d'une implémentation de tâche, qui liste simplement les comptes disponibles. Il est également livré avec une variété d'autres outils,
+d'une implémentation de tâche, qui liste simplement les comptes disponibles. Il est également livré avec une variété
+d'autres outils,
 préconfiguré pour fonctionner avec le code du projet.
 
 Le code a été sourcé
@@ -153,10 +161,12 @@ npx solhint "contracts/**/*.sol" --fix
 
 # Smart Contract Build & Test
 
-yarn doit être installé pour utiliser les commandes yarn afin de créer le contrat intelligent. Cependant, les tâches de casque ci-dessus peuvent
+yarn doit être installé pour utiliser les commandes yarn afin de créer le contrat intelligent. Cependant, les tâches de
+casque ci-dessus peuvent
 également être utilisé pour compiler et tester le Smart Contract.
 
 Vous trouverez ci-dessous des commandes à exécuter séquentiellement pour créer le contrat intelligent
+
 ```shell
 yarn install
 yarn compile
@@ -165,10 +175,12 @@ yarn test
 
 # Etherscan verification
 
-Pour la vérification Etherscan, vous devez d'abord déployer un contrat sur un réseau Ethereum pris en charge par Etherscan, tel que Ropsten.
+Pour la vérification Etherscan, vous devez d'abord déployer un contrat sur un réseau Ethereum pris en charge par
+Etherscan, tel que Ropsten.
 
-Dans ce projet, copiez le fichier .env.example dans un fichier nommé .env, puis modifiez-le pour remplir les détails. 
-Entrez votre clé API Etherscan, l'URL de votre nœud Ropsten (par exemple d'Alchemy) et la clé privée du compte qui enverra la transaction de déploiement. Avec un fichier .env valide en place, déployez d'abord votre contrat :
+Dans ce projet, copiez le fichier .env.example dans un fichier nommé .env, puis modifiez-le pour remplir les détails.
+Entrez votre clé API Etherscan, l'URL de votre nœud Ropsten (par exemple d'Alchemy) et la clé privée du compte qui
+enverra la transaction de déploiement. Avec un fichier .env valide en place, déployez d'abord votre contrat :
 
 ```shell
 yarn deploy:ropsten

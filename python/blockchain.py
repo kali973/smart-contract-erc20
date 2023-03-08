@@ -1,7 +1,6 @@
 import os
-import subprocess
-
 import requests
+import subprocess
 
 current_dir = os.getcwd()
 activeMQ_url = "http://localhost:8161"

@@ -1,7 +1,6 @@
 import logging
 import os
 import platform
-import shlex
 import subprocess
 import sys
 import time
@@ -10,7 +9,7 @@ import webbrowser
 
 def a():
     # Exécution du script Python avec des privilèges d'administrateur
-    os.system('start cmd /k "python etheriumAccounts.py"')
+    os.system('start cmd /k "python smartContractDeploymentApplication.py"')
 
 
 def clear():
@@ -22,9 +21,6 @@ def clear():
 logging.disable(sys.maxsize)
 number = 1
 data = ""
-current_dir = os.getcwd()
-
-three_dirs_up = os.path.abspath(os.path.join(os.getcwd(), "../../../"))
 
 while number != '0':
     print()
@@ -54,8 +50,7 @@ while number != '0':
         data = ""
     elif number == '3':
         print("\n [***] Smart Contract Build ...\n")
-        os.system('npx hardhat run ./scripts/deploy.js --network ganache')
-
+        subprocess.Popen(['python', 'smartContractDeploymentApplication.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
         time.sleep(5)
         clear()
         data = ""
