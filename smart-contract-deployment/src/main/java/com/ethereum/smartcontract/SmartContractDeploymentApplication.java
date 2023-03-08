@@ -2,6 +2,7 @@ package com.ethereum.smartcontract;
 
 import com.ethereum.smartcontract.processus.SmartContractDeployment;
 import com.ethereum.smartcontract.processus.SmartContractFetchBalance;
+import com.ethereum.smartcontract.services.WriteActiveMQ;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,6 +15,7 @@ public class SmartContractDeploymentApplication {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SmartContractDeploymentApplication.class, args);
+        WriteActiveMQ.WriteMessageToActiveMQ("a9483281917a1d2b45296bc429270f2e15ef1e5b2657062eecac276c750a4dec","100L");
 
         String[] message = ReadMessageFromActiveMQ();
         String privateKey = message[0];
