@@ -11,6 +11,36 @@ def a():
     # Exécution du script Python avec des privilèges d'administrateur
     os.system('start cmd /k "python smartContractDeploymentApplication.py"')
 
+import os
+
+def execute_commands_in_directory(parent_dir):
+    for root, dirs, files in os.walk(parent_dir):
+        if "README.md" in files:
+            found_readme = True
+            os.chdir(root)
+
+            os.system('npx hardhat accounts')
+            os.system('npx hardhat compile')
+            os.system('npx hardhat clean')
+            os.system('npx hardhat test')
+            os.system('npx hardhat node')
+            os.system('npx hardhat help')
+            os.system('set REPORT_GAS=true')
+            os.system('npx hardhat test')
+            os.system('npx hardhat coverage')
+            os.system('npx hardhat run scripts/deploy.js')
+            os.system('node scripts/deploy.js')
+            os.system('npx eslint "**/*.js"')
+            os.system('npx eslint "**/*.js" --fix')
+            os.system('npx prettier "**/*.{json,sol,md}" --check')
+            os.system('npx prettier "**/*.{json,sol,md}" --write')
+            os.system('npx solhint "contracts/**/*.sol"')
+            os.system('npx solhint "contracts/**/*.sol" --fix')
+
+            break
+
+    if not found_readme:
+        print("Le fichier README.md n'a pas été trouvé dans le répertoire.")
 
 def clear():
     linux = 'clear'
@@ -33,7 +63,7 @@ while number != '0':
     data += ' [1] Install and Activate Package\n'
     data += ' [2] Launch ActiveMQ\n'
     data += ' [3] Smart Contract Build\n'
-    data += ' [4] Under Construction\n'
+    data += ' [4] Compilation des contrats intelligents Solidity\n'
     data += ' [0] Exit\n'
     print(data)
     number = input(" Number~# ")
@@ -55,8 +85,8 @@ while number != '0':
         clear()
         data = ""
     elif number == '4':
-        print("\n [***] Calculate Blockchain ...\n")
-        subprocess.Popen(['python', 'blockchain.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
+        print("\n [***] Compilation des contrats intelligents Solidity ...\n")
+        subprocess.Popen(['python', 'hardhat.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
         time.sleep(5)
         clear()
         data = ""

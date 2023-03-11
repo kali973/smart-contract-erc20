@@ -2,8 +2,6 @@
 
 ---
 
-
-
 La création d\'un smart contract pour l\'énergie solaire via la
 blockchain peut être réalisée en suivant les étapes suivantes :
 
@@ -51,6 +49,7 @@ blockchain peut être réalisée en suivant les étapes suivantes :
 ```
 
 ---
+
 En suivant ces étapes, vous pouvez créer un smart contract pour
 l'énergie solaire via la blockchain. Cela peut aider à faciliter les
 transactions entre les producteurs d'énergie solaire et les
@@ -123,11 +122,52 @@ l'énergie solaire via la blockchain, garantir la qualité et la
 fiabilité de l'énergie produite, ainsi que promouvoir l'utilisation de
 l'énergie renouvelable.
 
+# Contrat Solarix
+
+```
+Voici une description des différentes fonctions dans le contrat Solarix :
+
+   => IERC20 interface : cette interface définit les méthodes nécessaires pour interagir avec un token ERC20 standard.
+      Il s'agit d'une interface standard pour les tokens Ethereum.
+
+    constructor() : le constructeur du contrat qui est exécuté lorsqu'un nouveau contrat Solarix est déployé.
+    Il initialise plusieurs variables, notamment le propriétaire du contrat, le producteur, la quantité d'énergie produite, le prix de l'énergie, la limite de production et les informations sur le panneau solaire.
+
+    sellEnergy(uint256 quantity) : cette fonction est utilisée pour vendre de l'énergie et transférer les fonds au producteur.
+    Elle vérifie si le montant envoyé est suffisant pour la quantité d'énergie demandée et si suffisamment d'énergie est disponible pour la vente. Si toutes les conditions sont remplies, la fonction transfère les fonds au producteur.
+
+    setEnergyPrice(uint256 price) : cette fonction permet au producteur de modifier le prix de l'énergie.
+
+    addEnergyProduction(uint256 production) : cette fonction permet au producteur d'ajouter de la production d'énergie.
+    Elle vérifie si le producteur est autorisé à ajouter de la production d'énergie et si la production ajoutée ne dépasse pas la limite de production.
+
+    setSolarPanel(uint256 _power, uint256 _efficiency, uint256 _quantity, uint256 _surface, string memory _manufacturer, string memory _model) : cette fonction permet au producteur de modifier les informations sur le panneau solaire utilisé pour produire de l'énergie.
+
+    getSolarPanel() : cette fonction permet de récupérer les informations sur le panneau solaire actuellement utilisé pour produire de l'énergie.
+
+    withdrawFunds() : cette fonction permet au propriétaire du contrat de retirer les fonds disponibles sur le contrat.
+
+    setProductionLimit(uint256 limit) : cette fonction permet au producteur de modifier la limite de production.
+
+    getProductionLimit() : cette fonction permet de récupérer la limite de production actuelle.
+
+    getCurrentProduction() : cette fonction permet de récupérer la quantité d'énergie produite qui n'a pas encore été vendue.
+
+    setProducer(address producerAddress) : cette fonction permet au propriétaire du contrat de modifier l'adresse du producteur.
+
+    getProducer() : cette fonction permet de récupérer l'adresse actuelle du producteur.
+
+    kill() : cette fonction permet au propriétaire du contrat de détruire le contrat et de récupérer tous les fonds restants sur le contrat.
+
+    getContractBalance() : cette fonction permet de récupérer le solde du contrat.
+
+    getOwnerSummary() : cette fonction permet de récupérer un résumé des soldes du propriétaire, y compris le solde de token ERC20 et le solde ETH.
+```
+
 # ERC20 project Blockchain
 
 Ce projet illustre un cas d'utilisation de base du jeton ERC-20, intégrant d'autres outils couramment utilisés aux côtés
-de Hardhat dans le
-écosystème.
+de Hardhat dans l'écosystème.
 
 Le projet est fourni avec un contrat, un test pour ce contrat, un exemple de script qui déploie ce contrat et un exemple
 d'une implémentation de tâche, qui liste simplement les comptes disponibles. Il est également livré avec une variété
@@ -147,7 +187,8 @@ npx hardhat clean
 npx hardhat test
 npx hardhat node
 npx hardhat help
-REPORT_GAS=true npx hardhat test
+set REPORT_GAS=true
+npx hardhat test
 npx hardhat coverage
 npx hardhat run scripts/deploy.js
 node scripts/deploy.js

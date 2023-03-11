@@ -15,7 +15,7 @@ public class SmartContractDeploymentApplication {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SmartContractDeploymentApplication.class, args);
-        WriteActiveMQ.WriteMessageToActiveMQ("a9483281917a1d2b45296bc429270f2e15ef1e5b2657062eecac276c750a4dec","100L");
+        WriteActiveMQ.WriteMessageToActiveMQ("0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80","100L");
 
         String[] message = ReadMessageFromActiveMQ();
         String privateKey = message[0];
@@ -26,8 +26,8 @@ public class SmartContractDeploymentApplication {
         SmartContractDeployment.deployContract(nodeUrl, privateKey, defaultSupply);
 
         // Appel à la fonction SmartContractFetchBalance
-        String contractAddress = "0x123456789abcdef";
-        String walletAddress = "0x987654321fedcba";
+        String contractAddress = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266";
+        String walletAddress = "0xf39fd6e51aad188f6f4ce6ab8827279cfffb92266";
         String nodeUrl2 = "http://localhost:8545";
         SmartContractFetchBalance.fetchBalance(contractAddress, walletAddress, nodeUrl2, privateKey);
 

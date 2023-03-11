@@ -4,89 +4,81 @@ pragma solidity ^0.8.0;
 
 import "./IERC20.sol";
 
-// Sample Code taken from https://ethereum.org/en/developers/tutorials/understand-the-erc-20-token-smart-contract/
-
 contract Token is IERC20 {
-    string public constant name = "ERC20-Demo-Contract";
-    string public constant symbol = "EDC";
-    uint8 public constant decimals = 2; // 18 is default decimal places, for simplicity it is considered as 2
+    string public constant NAME = "ERC20-Demo-Contract";
+    string public constant SYMBOL = "EDC";
+    uint8 public constant DECIMALS = 2; // 18 is default decimal places, for simplicity it is considered as 2
 
-    mapping(address => uint256) public balances;
-
-    mapping(address => mapping(address => uint256)) public allowed;
-
-    uint256 public totalSupply_;
+    mapping(address => uint256) private _balances;
+    mapping(address => mapping(address => uint256)) private _allowances;
+    uint256 private _totalSupply;
 
     constructor(uint256 total) {
-        totalSupply_ = total;
-        balances[msg.sender] = totalSupply_;
+        _totalSupply = total;
+        _balances[msg.sender] = _totalSupply;
+        emit Transfer(address(0), msg.sender, _totalSupply);
     }
 
     function totalSupply() public view override returns (uint256) {
-        return totalSupply_;
+        return _totalSupply;
     }
 
-    function balanceOf(address tokenOwner)
-    public
-    view
-    override
-    returns (uint256)
-    {
-        return balances[tokenOwner];
+    function balanceOf(address account) public view override returns (uint256) {
+        return _balances[account];
     }
 
-    function transfer(address receiver, uint256 numTokens)
-    public
-    override
-    returns (bool)
+    function transfer(address recipient, uint256 amount)
+        public
+        override
+        returns (bool)
     {
         require(
-            numTokens <= balances[msg.sender],
-            "Balance is less than available."
+            _balances[msg.sender] >= amount,
+            "Token amount exceeds balance"
         );
-        balances[msg.sender] = balances[msg.sender] - (numTokens);
-        balances[receiver] = balances[receiver] + (numTokens);
-        emit Transfer(msg.sender, receiver, numTokens);
+        _balances[msg.sender] -= amount;
+        _balances[recipient] += amount;
+        emit Transfer(msg.sender, recipient, amount);
         return true;
     }
 
-    function approve(address delegate, uint256 numTokens)
-    public
-    override
-    returns (bool)
+    function name() public pure returns (string memory) {
+        return NAME;
+    }
+
+    function approve(address spender, uint256 amount)
+        public
+        override
+        returns (bool)
     {
-        allowed[msg.sender][delegate] = numTokens;
-        emit Approval(msg.sender, delegate, numTokens);
+        _allowances[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
         return true;
     }
 
-    function allowance(address owner, address delegate)
-    public
-    view
-    override
-    returns (uint256)
+    function allowance(address owner, address spender)
+        public
+        view
+        override
+        returns (uint256)
     {
-        return allowed[owner][delegate];
+        return _allowances[owner][spender];
     }
 
     function transferFrom(
-        address owner,
-        address buyer,
-        uint256 numTokens
+        address sender,
+        address recipient,
+        uint256 amount
     ) public override returns (bool) {
+        require(_balances[sender] >= amount, "Token amount exceeds balance");
         require(
-            numTokens <= balances[owner],
-            "Balance is less than available."
+            _allowances[sender][msg.sender] >= amount,
+            "Token amount exceeds allowance"
         );
-        require(
-            numTokens <= allowed[owner][msg.sender],
-            "Qty is less than allowance."
-        );
-
-        balances[owner] = balances[owner] - (numTokens);
-        allowed[owner][msg.sender] = allowed[owner][msg.sender] - (numTokens);
-        balances[buyer] = balances[buyer] + (numTokens);
-        emit Transfer(owner, buyer, numTokens);
+        _balances[sender] -= amount;
+        _allowances[sender][msg.sender] -= amount;
+        _balances[recipient] += amount;
+        emit Transfer(sender, recipient, amount);
         return true;
     }
 }

@@ -1,52 +1,212 @@
-// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// Interface pour les ERC20 tokens
+interface IERC20 {
+    function transfer(address to, uint256 value) external returns (bool);
+
+    function transferFrom(
+        address from,
+        address to,
+        uint256 value
+    ) external returns (bool);
+
+    function balanceOf(address account) external view returns (uint256);
+
+    function approve(address spender, uint256 value) external returns (bool);
+}
+
+/**
+
+    @title Solarix
+
+    @dev Un contrat pour vendre de l'énergie solaire.
+    */
 contract Solarix {
-    address public producer;
-    uint public energyProduction;
-    uint public energyPrice;
-    uint public energySold;
+    address public owner; // adresse du propriétaire du contrat
+    address public producer; // adresse du producteur d'énergie
+    uint256 public energyProduction; // quantité totale d'énergie produite
+    uint256 public energyPrice; // prix de l'énergie par unité
+    uint256 public energySold; // quantité d'énergie vendue
+    uint256 public productionLimit; // limite de production d'énergie
 
+    // structure pour stocker les informations sur le panneau solaire
     struct SolarPanel {
-        uint power;
-        uint efficiency;
-        uint quantity;
-        uint surface;
-        string manufacturer;
-        string model;
+        uint256 power; // puissance en watts crête (Wc)
+        uint256 efficiency; // efficacité en pourcentage (%)
+        uint256 quantity; // quantité de panneaux solaires installés
+        uint256 surface; // surface totale des panneaux solaires en mètres carrés (m²)
+        string manufacturer; // nom du fabricant
+        string model; // modèle du panneau solaire
     }
 
-    SolarPanel public solarPanel;
+    SolarPanel public solarPanel; // informations sur le panneau solaire
 
-    constructor(uint _power, uint _efficiency, uint _quantity, uint _surface, string memory _manufacturer, string memory _model) {
+    mapping(address => uint256) public solarPanelPower; // puissance des panneaux solaires pour chaque adresse de propriétaire
+
+    IERC20 public token; // contrat ERC20 token
+
+    // Constructeur du contrat
+    constructor(
+        uint256 _power,
+        uint256 _efficiency,
+        uint256 _quantity,
+        uint256 _surface,
+        string memory _manufacturer,
+        string memory _model,
+        address _tokenAddress
+    ) {
+        owner = msg.sender;
         producer = msg.sender;
-        solarPanel = SolarPanel(_power, _efficiency, _quantity, _surface, _manufacturer, _model);
+        solarPanel = SolarPanel(
+            _power,
+            _efficiency,
+            _quantity,
+            _surface,
+            _manufacturer,
+            _model
+        );
+        token = IERC20(_tokenAddress);
     }
 
-    function sellEnergy(uint quantity) public payable {
-        require(msg.value == quantity * energyPrice, "Invalid payment amount.");
-        require(quantity <= energyProduction - energySold, "Not enough energy available for sale.");
+    /**
+
+        @dev Vendre de l'énergie et transférer les fonds au producteur.
+
+        @param quantity La quantité d'énergie à vendre.
+        */
+    function sellEnergy(uint256 quantity) public payable {
+        require(
+            msg.value == quantity * energyPrice,
+            "Montant de paiement invalide."
+        );
+        require(
+            quantity <= energyProduction - energySold,
+            "Energie non disponible."
+        );
 
         energySold += quantity;
         payable(producer).transfer(msg.value);
     }
 
-    function setEnergyPrice(uint price) public {
-        require(msg.sender == producer, "Only the producer can set the energy price.");
+    /**
+        @dev Définir le prix de l'énergie.
+        @param price Le nouveau prix de l'énergie.
+        */
+    function setEnergyPrice(uint256 price) public {
+        require(
+            msg.sender == producer,
+            "Seul le producteur peut definir le prix de l'energie."
+        );
+        require(price > 0, "Le prix doit etre superieur a zero.");
         energyPrice = price;
     }
 
-    function addEnergyProduction(uint production) public {
-        require(msg.sender == producer, "Only the producer can add energy production.");
+    /**
+     * @dev Add energy production.
+     * @param production The amount of energy to add.
+     */
+    function addEnergyProduction(uint256 production) public {
+        require(
+            msg.sender == producer,
+            "Only the producer can add energy production."
+        );
+        require(production > 0, "Production must be greater than zero.");
+        require(
+            energyProduction + production <= productionLimit,
+            "Production limit exceeded."
+        );
         energyProduction += production;
     }
 
-    function setSolarPanel(uint _power, uint _efficiency, uint _quantity, uint _surface, string memory _manufacturer, string memory _model) public {
-        require(msg.sender == producer, "Only the producer can set the solar panel information.");
-        solarPanel = SolarPanel(_power, _efficiency, _quantity, _surface, _manufacturer, _model);
+    function setSolarPanel(
+        uint256 _power,
+        uint256 _efficiency,
+        uint256 _quantity,
+        uint256 _surface,
+        string memory _manufacturer,
+        string memory _model
+    ) public {
+        require(
+            msg.sender == producer,
+            "Only the producer can set the solar panel information."
+        );
+        solarPanel = SolarPanel(
+            _power,
+            _efficiency,
+            _quantity,
+            _surface,
+            _manufacturer,
+            _model
+        );
     }
 
-    function getSolarPanel() public view returns (uint, uint, uint, uint, string memory, string memory) {
-        return (solarPanel.power, solarPanel.efficiency, solarPanel.quantity, solarPanel.surface, solarPanel.manufacturer, solarPanel.model);
+    function getSolarPanel()
+        public
+        view
+        returns (
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            string memory,
+            string memory
+        )
+    {
+        return (
+            solarPanel.power,
+            solarPanel.efficiency,
+            solarPanel.quantity,
+            solarPanel.surface,
+            solarPanel.manufacturer,
+            solarPanel.model
+        );
+    }
+
+    function withdrawFunds() public {
+        require(msg.sender == owner, "Only the owner can withdraw funds.");
+        payable(owner).transfer(address(this).balance);
+    }
+
+    function setProductionLimit(uint256 limit) public {
+        require(
+            msg.sender == producer,
+            "Only the producer can set the production limit."
+        );
+        productionLimit = limit;
+    }
+
+    function getProductionLimit() public view returns (uint256) {
+        return productionLimit;
+    }
+
+    function getCurrentProduction() public view returns (uint256) {
+        return energyProduction - energySold;
+    }
+
+    function setProducer(address producerAddress) public {
+        require(
+            msg.sender == owner,
+            "Only the owner can set the producer address."
+        );
+        producer = producerAddress;
+    }
+
+    function getProducer() public view returns (address) {
+        return producer;
+    }
+
+    function kill() public {
+        require(msg.sender == owner, "Only the owner can kill the contract.");
+        selfdestruct(payable(owner));
+    }
+
+    function getContractBalance() public view returns (uint256) {
+        return address(this).balance;
+    }
+
+    function getOwnerSummary() public view returns (uint256, uint256) {
+        uint256 tokenBalance = token.balanceOf(owner);
+        uint256 etherBalance = address(this).balance;
+        return (tokenBalance, etherBalance);
     }
 }

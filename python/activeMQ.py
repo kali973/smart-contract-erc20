@@ -5,11 +5,6 @@ import sys
 import time
 from tqdm import tqdm
 
-# exécute la commande pip install --upgrade pip et install yarn et npn
-# subprocess.call(['npm', 'install', '--global', 'yarn'])
-# subprocess.call(['yarn', 'install'])
-# subprocess.call(['yarn', 'compile'])
-# subprocess.call(['yarn', 'test'])
 
 url = "https://nodejs.org/dist/v18.14.2/node-v18.14.2-x64.msi"
 filename = "nodejs_installer.msi"
@@ -18,6 +13,9 @@ filename = "nodejs_installer.msi"
 answer = input("Voulez-vous installer Node.js (o/n) ? => ")
 
 if answer.lower() == "o":
+    # Exécute la commande npm install --save-dev ts-node dans un terminal
+    os.system('npm install --save-dev ts-node')
+
     # Télécharger le fichier d'installation de Node.js
     response = requests.get(url)
     with open(filename, "wb") as f:
@@ -51,6 +49,26 @@ if response.lower() == 'o':
     print('L\'installation de Hardhat est terminée.')
 else:
     print('Installation de Hardhat annulée.')
+
+# Demander à l'utilisateur s'il souhaite installer hardhat
+response = input('Voulez-vous installer typescript ? (o/n) ')
+
+if response.lower() == 'o':
+    # Définir la commande npm
+    command = 'npm install typescript'
+
+    # Définir le nombre total d'itérations
+    total_iterations = 100
+
+    # Exécuter la commande avec tqdm pour afficher la barre de progression
+    with tqdm(total=total_iterations, desc='Installation de typescript', unit='iteration') as pbar:
+        os.system(command)
+        pbar.update(total_iterations)
+
+    # Afficher un message de confirmation
+    print('L\'installation de typescript est terminée.')
+else:
+    print('Installation de typescript annulée.')
 
 subprocess.run(['pip', 'install', '--upgrade', 'pip'])
 subprocess.run(["pip", "install", "docker-compose"])
