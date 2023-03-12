@@ -62,8 +62,8 @@ while number != '0':
     data += ' Select option:\n'
     data += ' [1] Install and Activate Package\n'
     data += ' [2] Launch ActiveMQ\n'
-    data += ' [3] Smart Contract Build\n'
-    data += ' [4] Compilation des contrats intelligents Solidity\n'
+    data += ' [3] Compilation des smart contrats & Micro service spring Boot\n'
+    data += ' [4] Smart Contract Build\n'
     data += ' [0] Exit\n'
     print(data)
     number = input(" Number~# ")
@@ -79,14 +79,14 @@ while number != '0':
         clear()
         data = ""
     elif number == '3':
-        print("\n [***] Smart Contract Build ...\n")
-        subprocess.Popen(['python', 'smartContractDeploymentApplication.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
+        print("\n [***] Compilation des smart contrats & Micro service spring Boot ...\n")
+        subprocess.Popen(['python', 'hardhat.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
         time.sleep(5)
         clear()
         data = ""
     elif number == '4':
-        print("\n [***] Compilation des contrats intelligents Solidity ...\n")
-        subprocess.Popen(['python', 'hardhat.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
+        print("\n [***] Smart Contract Build ...\n")
+        subprocess.Popen(['python', 'smartContractDeploymentApplication.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
         time.sleep(5)
         clear()
         data = ""

@@ -20,6 +20,7 @@ import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.web3j.protocol.http.HttpService;
+
 import org.web3j.token.Token;
 import org.web3j.tx.gas.ContractGasProvider;
 
@@ -139,8 +140,8 @@ public class DeploymentController {
 
             Map<String, String> contractData = new HashMap<>();
             contractData.put("Name", token.name().send());
-            contractData.put("Symbol", token.symbol().send());
-            contractData.put("Decimals", String.valueOf(token.decimals().send()));
+            contractData.put("Symbol", token.FUNC_SYMBOL);
+            contractData.put("Decimals", String.valueOf(token.FUNC_DECIMALS));
             contractData.put("Total Supply", String.valueOf(token.totalSupply().send()));
 
             transactionResponseData = Pair.of(
