@@ -26,7 +26,7 @@ public class SmartContractDeploymentApplication {
         SmartContractDeployment.deployContract(nodeUrl, privateKey, defaultSupply);
 
         // Appel à la fonction SmartContractFetchBalance
-        String contractAddress = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266";
+        String contractAddress = "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199";
         String walletAddress = "0xf39fd6e51aad188f6f4ce6ab8827279cfffb92266";
         String nodeUrl2 = "http://localhost:8545";
         SmartContractFetchBalance.fetchBalance(contractAddress, walletAddress, nodeUrl2, privateKey);

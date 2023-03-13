@@ -3,22 +3,22 @@
 pragma solidity ^0.8.0;
 
 interface IERC20 {
-// Retourne le total de jetons en circulation
-function totalSupply() external view returns (uint256);
+    // Retourne le total de jetons en circulation
+    function totalSupply() external view returns (uint256);
 
     // Retourne le solde d'un compte spécifique
     function balanceOf(address account) external view returns (uint256);
 
     // Retourne le montant de jetons qu'un propriétaire a autorisé un délégué à dépenser pour lui
     function allowance(address owner, address spender)
-    external
-    view
-    returns (uint256);
+        external
+        view
+        returns (uint256);
 
     // Transfère un certain montant de jetons à l'adresse du destinataire spécifiée
     function transfer(address recipient, uint256 amount)
-    external
-    returns (bool);
+        external
+        returns (bool);
 
     // Autorise un délégué à dépenser un certain montant de jetons en son nom
     function approve(address spender, uint256 amount) external returns (bool);

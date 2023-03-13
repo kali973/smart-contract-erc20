@@ -45,7 +45,6 @@ contract Solarix {
 
     IERC20 public token; // contrat ERC20 token
 
-    // Constructeur du contrat
     constructor(
         uint256 _power,
         uint256 _efficiency,
@@ -53,19 +52,30 @@ contract Solarix {
         uint256 _surface,
         string memory _manufacturer,
         string memory _model,
-        address _tokenAddress
+        address _token
     ) {
+        solarPanel = SolarPanel(_power, _efficiency, _quantity, _surface, _manufacturer, _model);
+        token = IERC20(_token);
         owner = msg.sender;
         producer = msg.sender;
-        solarPanel = SolarPanel(
-            _power,
-            _efficiency,
-            _quantity,
-            _surface,
-            _manufacturer,
-            _model
-        );
-        token = IERC20(_tokenAddress);
+    }
+
+    function addPower(uint256 _additionalPower) external {
+        require(msg.sender == producer, "Only the producer can add power.");
+        solarPanel.power += _additionalPower;
+    }
+
+    function setEnergyPrice(uint256 _energyPrice) external {
+        require(msg.sender == producer, "Only the producer can set the energy price.");
+        energyPrice = _energyPrice;
+    }
+
+    function sellEnergy() external {
+        require(msg.sender == producer, "Only the producer can sell energy.");
+        require(energyPrice > 0, "Energy price has not been set yet.");
+        energyProduction = solarPanel.power * solarPanel.efficiency * solarPanel.quantity * solarPanel.surface;
+        uint256 revenue = energyProduction * energyPrice;
+        token.transfer(msg.sender, revenue);
     }
 
     /**
@@ -89,34 +99,23 @@ contract Solarix {
     }
 
     /**
-        @dev Définir le prix de l'énergie.
-        @param price Le nouveau prix de l'énergie.
-        */
-    function setEnergyPrice(uint256 price) public {
-        require(
-            msg.sender == producer,
-            "Seul le producteur peut definir le prix de l'energie."
-        );
-        require(price > 0, "Le prix doit etre superieur a zero.");
-        energyPrice = price;
-    }
-
-    /**
      * @dev Add energy production.
      * @param production The amount of energy to add.
      */
-    function addEnergyProduction(uint256 production) public {
+    function addEnergyProduction(uint256 production, uint256 newProductionLimit) public {
         require(
             msg.sender == producer,
             "Only the producer can add energy production."
         );
         require(production > 0, "Production must be greater than zero.");
-        require(
-            energyProduction + production <= productionLimit,
-            "Production limit exceeded."
-        );
-        energyProduction += production;
+
+        // Vérification de la limite de production
+        require(energyProduction + production > newProductionLimit, "Production limit exceeded.");
+
+        energyProduction = energyProduction + production;
+        productionLimit = newProductionLimit;
     }
+
 
     function setSolarPanel(
         uint256 _power,
