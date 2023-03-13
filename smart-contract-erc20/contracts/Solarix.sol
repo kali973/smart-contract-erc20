@@ -116,6 +116,23 @@ contract Solarix {
         productionLimit = newProductionLimit;
     }
 
+    function updateSolarPanel(
+        uint256 _power,
+        uint256 _efficiency,
+        uint256 _quantity,
+        uint256 _surface,
+        string memory _manufacturer,
+        string memory _model
+    ) public {
+        require(msg.sender == producer, "Only the producer can update the solar panel.");
+
+        solarPanel.power = _power;
+        solarPanel.efficiency = _efficiency;
+        solarPanel.quantity = _quantity;
+        solarPanel.surface = _surface;
+        solarPanel.manufacturer = _manufacturer;
+        solarPanel.model = _model;
+    }
 
     function setSolarPanel(
         uint256 _power,
@@ -162,9 +179,12 @@ contract Solarix {
     }
 
     function withdrawFunds() public {
-        require(msg.sender == owner, "Only the owner can withdraw funds.");
-        payable(owner).transfer(address(this).balance);
+        require(msg.sender == owner, "Only the contract owner can withdraw funds.");
+        uint256 contractBalance = address(this).balance;
+        require(contractBalance > 0, "Contract balance is zero.");
+        payable(owner).transfer(contractBalance);
     }
+
 
     function setProductionLimit(uint256 limit) public {
         require(

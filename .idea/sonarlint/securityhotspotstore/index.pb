@@ -33,8 +33,6 @@ ksmart-contract-deployment/src/test/java/com/ethereum/smartcontract/controller/D
 ksmart-contract-deployment/src/main/java/com/ethereum/smartcontract/processus/SmartContractFetchBalance.java,b\4\b45d9b1a775432e20d532308487ec8440774f37e
 V
 &smart-contract-deployment/build.gradle,f\8\f8bb445149b0d7e21ce7c9d35986a3336dd2546d
-S
-#smart-contract-deployment/README.md,0\c\0c41a46a89541b56d58bf7cf1a2c66b5a8b0b472
 B
 python/activeMQ.py,9\0\90db4ef3a3779e5da277b2f54aef85c23053a6f8
 V
@@ -58,8 +56,6 @@ U
 %smart-contract-deployment/gradlew.bat,0\a\0a1566eb9067909705e36bc09202d3a4250e4af9
 A
 python/hardhat.py,6\b\6bd24af25673294c9f3bb91717c2704429319bc7
-X
-(smart-contract-erc20/test/sample-test.js,4\f\4f715363fa700fda6f15ba56ff0c9b0781beaf0b
 A
 python/solarix.py,d\e\de940cc7787b4121ac928d333bf86c1cf1a7087e
 —

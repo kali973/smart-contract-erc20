@@ -174,6 +174,8 @@ d'une implémentation de tâche, qui liste simplement les comptes disponibles. I
 d'autres outils,
 préconfiguré pour fonctionner avec le code du projet.
 
+![img.png](img.png)
+
 Le code a été sourcé
 from [UNDERSTAND THE ERC-20 TOKEN SMART CONTRACT](https://ethereum.org/en/developers/tutorials/understand-the-erc-20-token-smart-contract/)
 tutorial.

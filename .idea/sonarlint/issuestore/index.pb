@@ -33,8 +33,6 @@ ksmart-contract-deployment/src/main/java/com/ethereum/smartcontract/processus/Sm
 ^smart-contract-deployment/src/main/java/com/ethereum/smartcontract/services/WriteActiveMQ.java,5\f\5f38a5a4f46df9339f32e572a9bacbced425b6fb
 V
 &smart-contract-deployment/build.gradle,f\8\f8bb445149b0d7e21ce7c9d35986a3336dd2546d
-S
-#smart-contract-deployment/README.md,0\c\0c41a46a89541b56d58bf7cf1a2c66b5a8b0b472
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -56,8 +54,6 @@ Q
 ,python/smartContractDeploymentApplication.py,0\e\0eaf878268890119891a5d75b60803be11eac70e
 U
 %smart-contract-deployment/gradlew.bat,0\a\0a1566eb9067909705e36bc09202d3a4250e4af9
-X
-(smart-contract-erc20/test/sample-test.js,4\f\4f715363fa700fda6f15ba56ff0c9b0781beaf0b
 A
 python/solarix.py,d\e\de940cc7787b4121ac928d333bf86c1cf1a7087e
 A
