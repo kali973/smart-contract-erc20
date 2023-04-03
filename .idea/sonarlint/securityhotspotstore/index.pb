@@ -1,0 +1,19 @@
+
+X
+(smart-contract-erc20/coverage/index.html,e\7\e74359f9ca1b9fe5f41f516b32f5bdfc65f5af57
+h
+8smart-contract-erc20/coverage/contracts/Solarix.sol.html,a\c\ac7886b7decc47ebd2037f32904e813c8569782c
+b
+2smart-contract-erc20/coverage/contracts/index.html,0\9\0949fdef76cddeb1405382c586d3b40944cf9e35
+I
+smart-contract-erc20/.env,4\6\46aeb9a89a246c4e74f5c63c49ea32a843c59c0d
+w
+G.idea/sonarlint/issuestore/2/f/2fc09f9cdd5a302560cad313083663639b45dbcc,5\3\5308d9b8c0c365c5aa6c42644eae0810d8f0e2b1
+w
+G.idea/sonarlint/issuestore/4/f/4feeee70fc42dfc0634e8dee84eda165bb2341e6,3\8\38ceb29061f13baeaf007641e1cb60f9ed53faeb
+Å
+Q.idea/sonarlint/securityhotspotstore/2/f/2fc09f9cdd5a302560cad313083663639b45dbcc,a\e\ae33f1c90a5a5c3f08ed56668bf339a992aa5c6c
+Å
+Q.idea/sonarlint/securityhotspotstore/4/f/4feeee70fc42dfc0634e8dee84eda165bb2341e6,c\1\c18ba845681a7ddb1604b79c0404e63cdd7fff20
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

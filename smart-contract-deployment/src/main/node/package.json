@@ -1,0 +1,16 @@
+{
+  "name": "smart-contract-deployment",
+  "version": "1.0.0",
+  "author": {
+    "email": "gilles.coutard@outlook.fr",
+    "name": "Gilles Coutard"
+  },
+  "description": "Smart Contract Deployment and Testing",
+  "license": "Apache-2.0",
+  "repository": {
+    "url": "https://github.com/kali973/smart-contract-erc20",
+    "directory": "smart-contract-deployment",
+    "type": "remote"
+  },
+  "dependencies": {}
+}
