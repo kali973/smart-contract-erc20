@@ -35,10 +35,10 @@ conn = psycopg2.connect(
     dbname=dbname
 )
 
-# Création de la table "blocks"
+# Création de la table "blocks.js"
 cur = conn.cursor()
 cur.execute('''
-    CREATE TABLE IF NOT EXISTS blocks (
+    CREATE TABLE IF NOT EXISTS blocks.js (
         id SERIAL PRIMARY KEY,
         number BIGINT NOT NULL,
         hash TEXT NOT NULL,
@@ -48,7 +48,7 @@ cur.execute('''
     )
 ''')
 cur.execute('''
-    CREATE INDEX IF NOT EXISTS blocks_number_idx ON blocks (number)
+    CREATE INDEX IF NOT EXISTS blocks_number_idx ON blocks.js (number)
 ''')
 conn.commit()
 
@@ -96,7 +96,7 @@ cur.execute('''
         productionLimit NUMERIC(36, 18) NOT NULL,
         producer TEXT NOT NULL,
         proprietaire_id INTEGER REFERENCES proprietaires(id),
-        block_id INTEGER REFERENCES blocks(id)
+        block_id INTEGER REFERENCES blocks.js(id)
     )
 ''')
 cur.execute('''

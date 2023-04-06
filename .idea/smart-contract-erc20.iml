@@ -6,6 +6,8 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/smart-contract-erc20/artifacts" />
       <excludeFolder url="file://$MODULE_DIR$/smart-contract-erc20/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/client/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/client/tmp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

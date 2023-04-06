@@ -3,6 +3,7 @@ import subprocess
 import sys
 import time
 
+import docker
 import requests
 from tqdm import tqdm
 
@@ -72,6 +73,7 @@ else:
 
 subprocess.run(['pip', 'install', '--upgrade', 'pip'])
 subprocess.run(["pip", "install", "docker-compose"])
+
 try:
     subprocess.run(["docker-compose", "up"], check=True)
 except subprocess.CalledProcessError as e:
@@ -128,30 +130,30 @@ except subprocess.CalledProcessError as e:
         # Lancer docker-compose
         subprocess.call(["docker-compose", "up"], start_new_session=True)
 
-        # exécute la commande docker pull rmohr/activemq
-        subprocess.run(['docker', 'pull', 'rmohr/activemq'])
-
-        subprocess.run(["docker", "run", "-d", "-p", "80:80", "docker/getting-started"])
-
-        # Exécution de la commande Docker
-        subprocess.call(
-            ['docker', 'run', '--name', 'postgresql-container', '-p', '5432:5432', '-e', 'POSTGRES_PASSWORD=solarix',
-             '-d', 'postgres'])
-
-        # Define the Docker command
-        docker_cmd = ["docker", "run", "-d", "--rm", "--name", "ethereum", "-p", "8545:8545", "-p", "30303:30303",
-                      "ethereum/client-go:v1.9.25", "--rpc", "--rpcaddr", "0.0.0.0",
-                      "--rpcapi=db,eth,net,web3,personal", "--rpccorsdomain", "*", "--dev"]
-
-        # Execute the Docker command
-        result = subprocess.run(docker_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-        # Check if the command was successful
-        if result.returncode == 0:
-            print('Docker container started successfully')
-        else:
-            print(f'Error: {result.stderr.decode()}')
-
-        # exécute la commande docker run -p 61616:61616 -p 8161:8161 rmohr/activemq
-        command = 'docker run -p 61616:61616 -p 8161:8161 rmohr/activemq'
-        subprocess.call(command, shell=True)
+        # # exécute la commande docker pull rmohr/activemq
+        # subprocess.run(['docker', 'pull', 'rmohr/activemq'])
+        # 
+        # subprocess.run(["docker", "run", "-d", "-p", "80:80", "docker/getting-started"])
+        # 
+        # # Exécution de la commande Docker
+        # subprocess.call(
+        #     ['docker', 'run', '--name', 'postgresql-container', '-p', '5432:5432', '-e', 'POSTGRES_PASSWORD=solarix',
+        #      '-d', 'postgres'])
+        # 
+        # # Define the Docker command
+        # docker_cmd = ["docker", "run", "-d", "--rm", "--name", "ethereum", "-p", "8545:8545", "-p", "30303:30303",
+        #               "ethereum/client-go:v1.9.25", "--rpc", "--rpcaddr", "0.0.0.0",
+        #               "--rpcapi=db,eth,net,web3,personal", "--rpccorsdomain", "*", "--dev"]
+        # 
+        # # Execute the Docker command
+        # result = subprocess.run(docker_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # 
+        # # Check if the command was successful
+        # if result.returncode == 0:
+        #     print('Docker container started successfully')
+        # else:
+        #     print(f'Error: {result.stderr.decode()}')
+        # 
+        # # exécute la commande docker run -p 61616:61616 -p 8161:8161 rmohr/activemq
+        # command = 'docker run -p 61616:61616 -p 8161:8161 rmohr/activemq'
+        # subprocess.call(command, shell=True)

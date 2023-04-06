@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="blockchain@localhost" uuid="45523f5b-de95-4fc8-ba4f-4c2325bd6a83">
+    <data-source source="LOCAL" name="blockchain@localhost" uuid="c7ff9ee8-c964-43dc-b5f6-98daef91f032">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

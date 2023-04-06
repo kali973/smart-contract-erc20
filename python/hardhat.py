@@ -27,6 +27,7 @@ if compile_smart_contracts:
         if "hardhat.config.js" in files:
             found_readme = True
             os.chdir(root)
+            os.system('npm install --save-dev mocha')
             os.system('npm install --save-dev hardhat')
             os.system('npm install --save-dev @nomiclabs/hardhat-waffle')
             os.system('npx hardhat accounts')
