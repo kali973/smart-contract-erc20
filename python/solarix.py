@@ -66,8 +66,9 @@ while number != '0':
     data += ' [2] Create Database Blockchain\n'
     data += ' [3] Generate formulaire IHM\n'
     data += ' [4] Show ActiveMQ\n'
-    data += ' [5] Compilation des smart contrats & Micro service spring Boot\n'
-    data += ' [6] Smart Contract Build\n'
+    data += ' [5] SonarQube Analyse\n'
+    data += ' [6] Compilation des smart contrats & Micro service spring Boot\n'
+    data += ' [7] Smart Contract Build\n'
     data += ' [0] Exit\n'
     print(data)
     number = input(" Number~# ")
@@ -93,12 +94,17 @@ while number != '0':
         clear()
         data = ""
     elif number == '5':
+        print("\n [***] SonarQube Analyse...\n")
+        subprocess.run(["start", "cmd", "/c", "python", "sonarqube.py"], shell=True)
+        clear()
+        data = ""
+    elif number == '6':
         print("\n [***] Compilation des smart contrats & Micro service spring Boot ...\n")
         subprocess.Popen(['python', 'hardhat.py'], creationflags=subprocess.CREATE_NEW_CONSOLE)
         time.sleep(5)
         clear()
         data = ""
-    elif number == '6':
+    elif number == '7':
         print("\n [***] Smart Contract Build ...\n")
         subprocess.Popen(['python', 'smartContractDeploymentApplication.py'],
                          creationflags=subprocess.CREATE_NEW_CONSOLE)
@@ -109,4 +115,4 @@ while number != '0':
         print('\n [+] Good Bye ' + platform.uname()[1] + ' !\n')
         quit()
     else:
-        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6 or 0\n")
+        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6, 7 or 0\n")

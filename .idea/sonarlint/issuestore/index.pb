@@ -64,8 +64,6 @@ f
 6smart-contract-deployment/src/main/solidity/IERC20.sol,f\d\fdcdfb109362a9f8c01e9fd446f4c9eedc47e5ec
 S
 #smart-contract-erc20/.solhintignore,f\3\f3cb57ba9f3fe2f2a2d3229ddc21ba5db5f7aa07
-R
-"smart-contract-erc20/.solhint.json,8\7\87d1cf393386feb6c9a1fb28f5fa289fcfc4a39c
 Q
 !smart-contract-erc20/.env.example,6\a\6ad6d5d366d452d1af92838908ceb55c9760a747
 O
@@ -80,10 +78,6 @@ R
 "smart-contract-erc20/.eslintignore,8\e\8e51ab7e7b0515aa0a90346f3359ed110b250481
 X
 (smart-contract-erc20/contracts/Token.sol,0\e\0e617af4705cc2150dff2abcb12e632a627f9908
-Z
-*smart-contract-erc20/contracts/Solarix.sol,7\0\7020b3930cfe29f5d55a726ec9ffcdfe3a6fd3fb
-Y
-)smart-contract-erc20/contracts/IERC20.sol,f\3\f351bbb90fb7003dcd9ec83599049995f5e9d494
 a
 1smart-contract-deployment/src/main/node/yarn.lock,c\e\ceba59604d91c97985fb5e77adc8757026e5485a
 i
@@ -108,16 +102,12 @@ Wsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/utils/Consta
 \smart-contract-deployment/src/main/java/com/ethereum/smartcontract/model/ContractDeploy.java,0\d\0d9f74d0fb8935c5cffb44eb794ab2937eacdcf0
 ê
 `smart-contract-deployment/src/test/java/com/ethereum/smartcontract/model/ContractDeployTest.java,5\8\584c7e3fa84708b67e0917dab0575e812cce2b6e
-V
-&smart-contract-erc20/scripts/deploy.js,f\d\fd11d6971ec25d1f4567ed488c78593ac0f35111
 A
 scripts/deploy.ts,3\c\3c1f0f01d799adc79b1990b998a0958bef0768aa
 ó
 gsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/controller/DeploymentController.java,b\6\b6fd9456145f666f018f66a845a243cb4830e6ca
 õ
 ksmart-contract-deployment/src/test/java/com/ethereum/smartcontract/controller/DeploymentControllerTest.java,6\a\6aab70df62ac5e5d45749ab24b787588e149e0ea
-V
-&smart-contract-erc20/hardhat.config.js,6\a\6a74087d3854059b6ee5a246bc59e7123e7b8f56
 L
 alchemy-ui/public/index.html,c\a\ca69fa168f5892f9a4584db2e376b0acebf872ec
 G
@@ -132,8 +122,6 @@ D
 alchemy-ui/README.md,2\3\23dfd33a346b1811ffb15d52f1bf58375f586548
 S
 #smart-contract-deployment/README.md,0\c\0c41a46a89541b56d58bf7cf1a2c66b5a8b0b472
-N
-smart-contract-erc20/README.md,e\b\eb959467b0430ef1634fc95d993b695186371975
 Q
 !alchemy-ui/src/reportWebVitals.js,1\e\1eff6dc41cb58e347a9ade97c801581098de2cfe
 L
@@ -162,11 +150,7 @@ jsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/SmartContrac
 ismart-contract-deployment/src/main/java/com/ethereum/smartcontract/processus/SmartContractDeployment.java,4\9\496f97baf1a4f19354e820bbc1cc68d0e7d50265
 õ
 ksmart-contract-deployment/src/main/java/com/ethereum/smartcontract/processus/SmartContractFetchBalance.java,b\4\b45d9b1a775432e20d532308487ec8440774f37e
-é
-^smart-contract-deployment/src/main/java/com/ethereum/smartcontract/services/WriteActiveMQ.java,5\f\5f38a5a4f46df9339f32e572a9bacbced425b6fb
 D
 python/blockchain.py,5\b\5b11017e4d3f765f94b8c0c1baac58cbf0697c51
-A
-python/solarix.py,d\e\de940cc7787b4121ac928d333bf86c1cf1a7087e
 C
 python/postgREST.py,3\5\351e98330a9514364c718f10c54fed2e939d5118

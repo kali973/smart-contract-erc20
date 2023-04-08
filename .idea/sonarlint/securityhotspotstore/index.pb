@@ -110,12 +110,8 @@ dsmart-contract-deployment/src/test/java/com/ethereum/smartcontract/exception/We
 ksmart-contract-deployment/src/test/java/com/ethereum/smartcontract/controller/DeploymentControllerTest.java,6\a\6aab70df62ac5e5d45749ab24b787588e149e0ea
 S
 #smart-contract-erc20/.solhintignore,f\3\f3cb57ba9f3fe2f2a2d3229ddc21ba5db5f7aa07
-R
-"smart-contract-erc20/.solhint.json,8\7\87d1cf393386feb6c9a1fb28f5fa289fcfc4a39c
 Q
 !smart-contract-erc20/.env.example,6\a\6ad6d5d366d452d1af92838908ceb55c9760a747
-V
-&smart-contract-erc20/hardhat.config.js,6\a\6a74087d3854059b6ee5a246bc59e7123e7b8f56
 O
 smart-contract-erc20/.npmignore,f\c\fc99f49c6b24ba84e9d1580d87ee18a3cd289816
 T
@@ -128,14 +124,8 @@ O
 smart-contract-erc20/.gitignore,1\6\16af6422cc839f467218c05cfed876c5a3135d1a
 R
 "smart-contract-erc20/.eslintignore,8\e\8e51ab7e7b0515aa0a90346f3359ed110b250481
-V
-&smart-contract-erc20/scripts/deploy.js,f\d\fd11d6971ec25d1f4567ed488c78593ac0f35111
 X
 (smart-contract-erc20/contracts/Token.sol,0\e\0e617af4705cc2150dff2abcb12e632a627f9908
-Z
-*smart-contract-erc20/contracts/Solarix.sol,7\0\7020b3930cfe29f5d55a726ec9ffcdfe3a6fd3fb
-Y
-)smart-contract-erc20/contracts/IERC20.sol,f\3\f351bbb90fb7003dcd9ec83599049995f5e9d494
 ó
 gsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/controller/DeploymentController.java,b\6\b6fd9456145f666f018f66a845a243cb4830e6ca
 í
@@ -152,8 +142,6 @@ w
 G.idea/sonarlint/issuestore/a/c/ac7886b7decc47ebd2037f32904e813c8569782c,3\6\36196348a28f3fe38b4ce3c91ae13faf0307f327
 Å
 Q.idea/sonarlint/securityhotspotstore/e/7/e74359f9ca1b9fe5f41f516b32f5bdfc65f5af57,b\4\b4fdc8e95dd5267dbb8699672c02d722c2ecce65
-N
-smart-contract-erc20/README.md,e\b\eb959467b0430ef1634fc95d993b695186371975
 ô
 ismart-contract-deployment/src/main/java/com/ethereum/smartcontract/processus/SmartContractDeployment.java,4\9\496f97baf1a4f19354e820bbc1cc68d0e7d50265
 ç
@@ -164,9 +152,5 @@ ksmart-contract-deployment/src/main/java/com/ethereum/smartcontract/processus/Sm
 jsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/SmartContractDeploymentApplication.java,3\8\3887f5708b0e0a361efc82e1091bcb5d2bef08ba
 D
 python/blockchain.py,5\b\5b11017e4d3f765f94b8c0c1baac58cbf0697c51
-é
-^smart-contract-deployment/src/main/java/com/ethereum/smartcontract/services/WriteActiveMQ.java,5\f\5f38a5a4f46df9339f32e572a9bacbced425b6fb
 C
 python/postgREST.py,3\5\351e98330a9514364c718f10c54fed2e939d5118
-A
-python/solarix.py,d\e\de940cc7787b4121ac928d333bf86c1cf1a7087e
