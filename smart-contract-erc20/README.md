@@ -254,3 +254,5 @@ npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS 10000
 ```shell
 npx hardhat verify --network ropsten 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 10000
 ```
+
+Analyze "solarix": Analyze "solarix": sqp_e504bbb36f7899f2ff47a9d3fa854b92f0de4c3b

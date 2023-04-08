@@ -69,6 +69,8 @@ while number != '0':
     data += ' [5] SonarQube Analyse\n'
     data += ' [6] Compilation des smart contrats & Micro service spring Boot\n'
     data += ' [7] Smart Contract Build\n'
+    data += ' [8] Write message ActiveMQ\n'
+    data += ' [9] Deploy.js --network aurora\n'
     data += ' [0] Exit\n'
     print(data)
     number = input(" Number~# ")
@@ -111,8 +113,22 @@ while number != '0':
         time.sleep(5)
         clear()
         data = ""
+    elif number == '8':
+        print("\n [***] Write message ActiveMQ ...\n")
+        subprocess.Popen(['python', 'writeActiveMQ.py'],
+                        creationflags=subprocess.CREATE_NEW_CONSOLE)
+        time.sleep(5)
+        clear()
+        data = ""
+    elif number == '9':
+        print("\n [***] Deploy.js --network aurora ...\n")
+        subprocess.Popen(['python', 'deploySmartContrat.py'],
+                         creationflags=subprocess.CREATE_NEW_CONSOLE)
+        time.sleep(5)
+        clear()
+        data = ""
     elif number == '0':
         print('\n [+] Good Bye ' + platform.uname()[1] + ' !\n')
         quit()
     else:
-        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6, 7 or 0\n")
+        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6, 7, 8 or 0\n")

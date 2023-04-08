@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'org.web3j' version '4.8.7'    //Web3J Plugin to interact with Smart Contract
+    id "org.sonarqube" version "4.0.0.2929"
 }
 
 solidity {
