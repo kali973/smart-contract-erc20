@@ -54,7 +54,7 @@ deploy_file_path = find_settings_gradle(os.getcwd())
 if deploy_file_path:
     # Exécution de la commande Gradle pour exécuter SonarQube
     os.chdir(os.path.dirname(deploy_file_path))
-    os.system('gradlew.bat sonar -Dsonar.projectKey=solarix -Dsonar.projectName=solarix -Dsonar.host.url=http://127.0.0.1:9000 -Dsonar.token=sqp_e504bbb36f7899f2ff47a9d3fa854b92f0de4c3b')
+    os.system('gradlew.bat sonar -Dsonar.projectKey=solarix -Dsonar.projectName=solarix -Dsonar.host.url=http://127.0.0.1:9000 -Dsonar.token=sqp_8e02d1cf289d9d45c9dca4ff2b397663ce8f79c6')
     print(f"Le fichier settings.gradle a été trouvé dans {deploy_file_path} et la commande Gradle pour exécuter SonarQube a été exécutée.")
 else:
     print("Le fichier settings.gradle n'a pas été trouvé dans le projet.")

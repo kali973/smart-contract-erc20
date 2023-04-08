@@ -131,4 +131,4 @@ while number != '0':
         print('\n [+] Good Bye ' + platform.uname()[1] + ' !\n')
         quit()
     else:
-        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6, 7, 8 or 0\n")
+        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6, 7, 8, 9 or 0\n")
