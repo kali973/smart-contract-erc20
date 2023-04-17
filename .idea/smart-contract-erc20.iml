@@ -8,6 +8,10 @@
       <excludeFolder url="file://$MODULE_DIR$/smart-contract-erc20/cache" />
       <excludeFolder url="file://$MODULE_DIR$/solarix/client/dist" />
       <excludeFolder url="file://$MODULE_DIR$/solarix/client/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/client/solarix/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/client/solarix/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/angular/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/angular/tmp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/solarix/client/dist" />
       <excludeFolder url="file://$MODULE_DIR$/solarix/client/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/client/solarix/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/client/solarix/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/angular/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/solarix/angular/tmp" />
     </content>
+    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
