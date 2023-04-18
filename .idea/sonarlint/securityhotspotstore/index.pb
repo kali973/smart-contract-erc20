@@ -65,10 +65,6 @@ G
 alchemy-ui/package.json,e\7\e7c0df50a315d2faae8ccc777f64211125473a62
 d
 4smart-contract-deployment/src/main/node/package.json,c\7\c747960ee7a1183b82d0cfb160550a3026015211
-r
-Bsmart-contract-deployment/gradle/wrapper/gradle-wrapper.properties,4\7\47f503fe618ab0dddf0cbb934e7e62cb94333b11
-Y
-)smart-contract-deployment/settings.gradle,6\3\6327b6d8cf9807796125293d788902260b84f87a
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -184,16 +180,12 @@ w
 G.idea/sonarlint/issuestore/f/d/fd11d6971ec25d1f4567ed488c78593ac0f35111,2\7\277c0088d9a1e67b182f4ebd032d0936db93ec16
 Å
 Q.idea/sonarlint/securityhotspotstore/f/d/fd11d6971ec25d1f4567ed488c78593ac0f35111,1\e\1e21ca1ecbebbd3663ac0b6006abe940c02b9f9a
-Å
-Q.idea/sonarlint/securityhotspotstore/e/4/e403977e759bbd56fbedbe411760e92dd3c6d68d,9\3\93c9e236dac6c67f8cd63a271828b08293b0a696
 w
 G.idea/sonarlint/issuestore/0/f/0ff34ea521405c8fef8621a6c8a45a037e76100a,8\a\8aaca097a68f2e60c7c2f7d9f31712c01b7083b9
 w
 G.idea/sonarlint/issuestore/e/e/ee56805dcd158f3ec4c4114d9554b542dbfc2340,b\0\b00eaca3e7ccda879d37f85d202ddc361073b52e
 Å
 Q.idea/sonarlint/securityhotspotstore/6/c/6cfd1838a7890779bf7809996328568c7af3bdc1,9\a\9a6d4af84346971864c5f6cf6e94fe24da38a360
-w
-G.idea/sonarlint/issuestore/e/4/e403977e759bbd56fbedbe411760e92dd3c6d68d,9\2\92c0d259e7ef82913df62b589ed11cd963807982
 ö
 jsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/SmartContractDeploymentApplication.java,3\8\3887f5708b0e0a361efc82e1091bcb5d2bef08ba
 w
@@ -210,15 +202,5 @@ A
 python/solarix.py,d\e\de940cc7787b4121ac928d333bf86c1cf1a7087e
 C
 python/sonarqube.py,a\4\a44f931900bba5b5b7f8a665ee2eb5edb4cfadee
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 S
 #smart-contract-deployment/README.md,0\c\0c41a46a89541b56d58bf7cf1a2c66b5a8b0b472
-N
-smart-contract-erc20/README.md,e\b\eb959467b0430ef1634fc95d993b695186371975
-V
-&smart-contract-deployment/build.gradle,f\8\f8bb445149b0d7e21ce7c9d35986a3336dd2546d
-B
-python/activeMQ.py,9\0\90db4ef3a3779e5da277b2f54aef85c23053a6f8
-B
-python/database.py,9\f\9f1678bd5b67cadf72e5df204a730e52cb96ccc6
