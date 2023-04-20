@@ -19,8 +19,6 @@ D
 alchemy-ui/yarn.lock,0\9\098fe3cbc85f61992a09f7896ee2311bfe4e676b
 B
 alchemy-ui/LICENSE,e\5\e5c0c69786a7717fa410f8e9732f0dd91c885251
-F
-alchemy-ui/src/App.css,b\4\b405b4294b77121649178bae3b187df09af712e8
 H
 alchemy-ui/src/index.css,8\5\851130f0eaa549170109e267077f28010ab02fed
 P
@@ -192,8 +190,6 @@ Q.idea/sonarlint/securityhotspotstore/e/e/ee56805dcd158f3ec4c4114d9554b542dbfc23
 Q.idea/sonarlint/securityhotspotstore/4/4/4434e258a6a58dc166ac9eb38c2298137b7d1305,4\1\4174b3c49f26949979323df13a43fb156825d95d
 w
 G.idea/sonarlint/issuestore/4/4/4434e258a6a58dc166ac9eb38c2298137b7d1305,1\a\1aff60d0fef4370ff8a8089ae0a419d168e00686
-š
-jsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/SmartContractDeploymentApplication.java,3\8\3887f5708b0e0a361efc82e1091bcb5d2bef08ba
 C
 python/sonarqube.py,a\4\a44f931900bba5b5b7f8a665ee2eb5edb4cfadee
 S
@@ -202,8 +198,6 @@ T
 $solarix/react-frontend/src/index.css,e\f\ef5bbbac06304197665e2ba561f93f933658be0d
 R
 "solarix/react-frontend/src/App.css,b\8\b80c8e8a39807362bc446806afe72759988a7257
-]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 X
 (solarix/react-frontend/package-lock.json,d\f\df6331e9109b60b6ecd9178011270d3b335faafc
 Q
@@ -216,8 +210,6 @@ S
 #solarix/springboot-backend/mvnw.cmd,a\a\aa35a7ca96cb33e67154d861680ba8705226b8a5
 r
 Bsmart-contract-deployment/gradle/wrapper/gradle-wrapper.properties,4\7\47f503fe618ab0dddf0cbb934e7e62cb94333b11
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 p
 @solarix/springboot-backend/.mvn/wrapper/maven-wrapper.properties,8\d\8d1542f5c720452519335a8294bba3860324a276
 s
@@ -252,8 +244,6 @@ R
 "solarix/.jpb/persistence-units.xml,b\f\bf122aadd466fcb1bbf7e6a5998fe3d0bc948e0c
 N
 smart-contract-erc20/README.md,e\b\eb959467b0430ef1634fc95d993b695186371975
-9
-	build.yml,1\6\1655dd5eef40307094c7f596055debf45ada9fef
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 A
@@ -262,12 +252,8 @@ V
 &smart-contract-deployment/build.gradle,f\8\f8bb445149b0d7e21ce7c9d35986a3336dd2546d
 d
 4python/smartContractDeploymentApplicationFrontEnd.py,f\5\f570dc5579d032f60a837ef667a8513dbfe65ee0
-”
-dsolarix/springboot-backend/src/main/java/net/javaguides/springboot/SpringbootBackendApplication.java,4\d\4ddc10cef1be2b845a93e1d2d0433cfcce4004e0
 A
 solarix/README.md,6\9\6937382a0657c169a108268480ed09ea2979813b
-R
-"solarix/springboot-backend/pom.xml,f\f\ff7f1be5069a87e23653abc62f8397df2b277f91
 q
 Asolarix/react-frontend/src/components/employe/FooterComponent.jsx,0\1\0114f408efd38812962d78019486ae258aa0c55a
 y

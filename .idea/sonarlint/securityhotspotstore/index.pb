@@ -23,8 +23,6 @@ D
 alchemy-ui/README.md,2\3\23dfd33a346b1811ffb15d52f1bf58375f586548
 B
 alchemy-ui/LICENSE,e\5\e5c0c69786a7717fa410f8e9732f0dd91c885251
-F
-alchemy-ui/src/App.css,b\4\b405b4294b77121649178bae3b187df09af712e8
 H
 alchemy-ui/src/index.css,8\5\851130f0eaa549170109e267077f28010ab02fed
 G
@@ -182,8 +180,6 @@ w
 G.idea/sonarlint/issuestore/e/e/ee56805dcd158f3ec4c4114d9554b542dbfc2340,b\0\b00eaca3e7ccda879d37f85d202ddc361073b52e
 Å
 Q.idea/sonarlint/securityhotspotstore/6/c/6cfd1838a7890779bf7809996328568c7af3bdc1,9\a\9a6d4af84346971864c5f6cf6e94fe24da38a360
-ö
-jsmart-contract-deployment/src/main/java/com/ethereum/smartcontract/SmartContractDeploymentApplication.java,3\8\3887f5708b0e0a361efc82e1091bcb5d2bef08ba
 w
 G.idea/sonarlint/issuestore/6/c/6cfd1838a7890779bf7809996328568c7af3bdc1,e\0\e041316b1f3aa80cb9592ac5a0818cfdf2e0ac2d
 w
@@ -220,8 +216,6 @@ S
 esolarix/springboot-backend/src/main/java/net/javaguides/springboot/repository/EmployeeRepository.java,a\5\a529ec546af0b15f9133c2e44123e97ed3bc32d3
 R
 "solarix/react-frontend/src/App.css,b\8\b80c8e8a39807362bc446806afe72759988a7257
-]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 w
 Gsolarix/react-frontend/src/components/employe/ListEmployeeComponent.jsx,5\0\502f822427e7bddb80d5f5e207a45214bba78b03
 X
@@ -242,8 +236,6 @@ J
 .jpb/persistence-units.xml,5\3\533e6ba475f9ee180f69b2b61d68128f99ca5d33
 r
 Bsmart-contract-deployment/gradle/wrapper/gradle-wrapper.properties,4\7\47f503fe618ab0dddf0cbb934e7e62cb94333b11
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 p
 @solarix/springboot-backend/.mvn/wrapper/maven-wrapper.properties,8\d\8d1542f5c720452519335a8294bba3860324a276
 s
@@ -254,12 +246,6 @@ N
 smart-contract-erc20/README.md,e\b\eb959467b0430ef1634fc95d993b695186371975
 A
 solarix/README.md,6\9\6937382a0657c169a108268480ed09ea2979813b
-9
-	build.yml,1\6\1655dd5eef40307094c7f596055debf45ada9fef
-î
-dsolarix/springboot-backend/src/main/java/net/javaguides/springboot/SpringbootBackendApplication.java,4\d\4ddc10cef1be2b845a93e1d2d0433cfcce4004e0
-R
-"solarix/springboot-backend/pom.xml,f\f\ff7f1be5069a87e23653abc62f8397df2b277f91
 A
 python/hardhat.py,6\b\6bd24af25673294c9f3bb91717c2704429319bc7
 <
