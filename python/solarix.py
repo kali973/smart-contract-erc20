@@ -8,7 +8,7 @@ import webbrowser
 
 def a():
     # Exécution du script Python avec des privilèges d'administrateur
-    os.system('start cmd /k "python smartContractDeploymentApplication.py"')
+    os.system('start cmd /k "python smartContractDeploymentApplicationFrontBack.py"')
 
 
 import os
@@ -64,13 +64,14 @@ while number != '0':
     data += ' Select option:\n'
     data += ' [1] Install and Activate Package\n'
     data += ' [2] Create Database Blockchain\n'
-    data += ' [3] Generate formulaire IHM\n'
+    data += ' [3] Launch formulaire IHM\n'
     data += ' [4] Show ActiveMQ\n'
     data += ' [5] SonarQube Analyse\n'
     data += ' [6] Compilation des smart contrats & Micro service spring Boot\n'
-    data += ' [7] Smart Contract Build\n'
-    data += ' [8] Write message ActiveMQ\n'
-    data += ' [9] Deploy.js --network aurora\n'
+    data += ' [7] FrontBack - Micro-service\n'
+    data += ' [8] FrontBack - Write message ActiveMQ\n'
+    data += ' [9] Deploiement network aurora\n'
+    data += ' [A] FrontEnd Micro-service\n'
     data += ' [0] Exit\n'
     print(data)
     number = input(" Number~# ")
@@ -86,8 +87,9 @@ while number != '0':
         clear()
         data = ""
     elif number == '3':
-        print("\n [***] Generate formulaire IHM\n")
-        subprocess.run(["start", "cmd", "/c", "python", "postgREST.py"], shell=True)
+        print("\n [***] Launch formulaire IHM\n")
+        subprocess.Popen(['python', 'reactJS.py'],
+                         creationflags=subprocess.CREATE_NEW_CONSOLE)
         clear()
         data = ""
     elif number == '4':
@@ -108,7 +110,7 @@ while number != '0':
         data = ""
     elif number == '7':
         print("\n [***] Smart Contract Build ...\n")
-        subprocess.Popen(['python', 'smartContractDeploymentApplication.py'],
+        subprocess.Popen(['python', 'smartContractDeploymentApplicationFrontBack.py'],
                          creationflags=subprocess.CREATE_NEW_CONSOLE)
         time.sleep(5)
         clear()
@@ -116,7 +118,7 @@ while number != '0':
     elif number == '8':
         print("\n [***] Write message ActiveMQ ...\n")
         subprocess.Popen(['python', 'writeActiveMQ.py'],
-                        creationflags=subprocess.CREATE_NEW_CONSOLE)
+                         creationflags=subprocess.CREATE_NEW_CONSOLE)
         time.sleep(5)
         clear()
         data = ""
@@ -127,8 +129,15 @@ while number != '0':
         time.sleep(5)
         clear()
         data = ""
+    elif number == 'A':
+        print("\n [***] Front End ...\n")
+        subprocess.Popen(['python', 'smartContractDeploymentApplicationFrontEnd.py'],
+                         creationflags=subprocess.CREATE_NEW_CONSOLE)
+        time.sleep(5)
+        clear()
+        data = ""
     elif number == '0':
         print('\n [+] Good Bye ' + platform.uname()[1] + ' !\n')
         quit()
     else:
-        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6, 7, 8, 9 or 0\n")
+        print("\n [X] Error !\n [!] Select this number: 1, 2, 3, 4, 5, 6, 7, 8, 9, A or 0\n")

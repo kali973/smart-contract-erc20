@@ -405,6 +405,32 @@ describe("Solarix Contract", function () {
       );
       expect(res.rowCount).to.equal(1);
     }
+    const insertValuesEmployees = [
+      ["Alice", "Martin", "alice.martin@gmail.com"],
+      ["Bob", "Johnson", "bob.johnson@yahoo.com"],
+      ["Claire", "Davis", "claire.davis@hotmail.com"],
+      ["David", "Smith", "david.smith@gmail.com"],
+      ["Emily", "Jones", "emily.jones@gmail.com"],
+      ["Frank", "Brown", "frank.brown@yahoo.com"],
+      ["Grace", "Wilson", "grace.wilson@hotmail.com"],
+      ["Henry", "Moore", "henry.moore@gmail.com"],
+      ["Isabella", "Taylor", "isabella.taylor@gmail.com"],
+      ["John", "Davis", "john.davis@yahoo.com"],
+      ["Katie", "Wilson", "katie.wilson@hotmail.com"],
+      ["Luke", "Miller", "luke.miller@gmail.com"],
+      ["Megan", "Anderson", "megan.anderson@yahoo.com"],
+      ["Nathan", "White", "nathan.white@hotmail.com"],
+      ["Oliver", "Garcia", "oliver.garcia@gmail.com"],
+    ];
+
+    for (const values of insertValuesEmployees) {
+      const res = await client.query(
+        `INSERT INTO employees (first_name, last_name, email_id) 
+      VALUES ($1, $2, $3)`,
+        values
+      );
+      expect(res.rowCount).to.equal(1);
+    }
 
     const insertValuesProprietaires = [
       [

@@ -3,7 +3,7 @@ import os
 
 for root, dirs, files in os.walk('..'):
     for file in files:
-        if file.endswith('.jar'):
+        if file.endswith('springboot-backend-0.0.1-SNAPSHOT.jar'):
             jar_file = os.path.join(root, file)
             break
     else:

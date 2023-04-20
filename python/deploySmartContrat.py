@@ -1,5 +1,4 @@
 import os
-import subprocess
 
 
 def find_and_deploy(start_dir):
@@ -8,10 +7,12 @@ def find_and_deploy(start_dir):
             deploy_file_path = os.path.join(root, "hardhat.config.js")
             os.chdir(root)
             os.system("yarn deploy:aurora")
-            print(f"Le fichier deploy.js a été trouvé dans {deploy_file_path} et la commande yarn deploy:aurora a été exécutée.")
+            print(
+                f"Le fichier deploy.js a été trouvé dans {deploy_file_path} et la commande yarn deploy:aurora a été exécutée.")
             return
 
     print("Le fichier deploy.js n'a pas été trouvé dans le projet.")
+
 
 if __name__ == '__main__':
     find_and_deploy('.')

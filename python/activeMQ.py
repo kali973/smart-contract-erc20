@@ -116,7 +116,7 @@ except subprocess.CalledProcessError as e:
         os.startfile(r"C:\Program Files\Docker\Docker\Docker Desktop.exe")
 
         # Attendre que l'application Docker Desktop soit lancée
-        for i in range(100, 0, -1):
+        for i in range(80, 0, -1):
             if i == 10:
                 sys.stdout.write("\033c")
                 sys.stdout.flush()

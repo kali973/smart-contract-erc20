@@ -19,7 +19,7 @@
     "sails-postgresql": "^5.0.1",
     "set-value": "^4.1.0",
     "typeorm": "^0.3.12",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
     "mocha": "^10.2.0",

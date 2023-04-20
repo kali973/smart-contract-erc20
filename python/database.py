@@ -34,7 +34,16 @@ conn = psycopg2.connect(
     password=password,
     dbname=dbname
 )
-
+# Création de la table "employee"
+cur = conn.cursor()
+cur.execute('''
+    CREATE TABLE IF NOT EXISTS employees (
+        id BIGSERIAL PRIMARY KEY,
+        first_name VARCHAR(255) NOT NULL,
+        last_name VARCHAR(255) NOT NULL,
+        email_id VARCHAR(255) NOT NULL
+    )
+''')
 # Création de la table "blocks"
 cur = conn.cursor()
 cur.execute('''

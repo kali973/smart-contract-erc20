@@ -1,2 +1,5 @@
-{"credStore":"desktop","stackOrchestrator":"swarm"}
+{
+  "credStore": "desktop",
+  "stackOrchestrator": "swarm"
+}
 

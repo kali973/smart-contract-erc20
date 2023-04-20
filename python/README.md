@@ -8,4 +8,5 @@ Fix credsStore to credStore:
 {"credStore":"desktop","stackOrchestrator":"swarm"}
 
 ```
+
 ---
