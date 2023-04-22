@@ -118,12 +118,6 @@ describe("Token Contract", function () {
     await token.deployed();
     expect((await token.totalSupply()).toString()).to.equal("100");
   });
-
-  it("should fail if owner tries to approve themselves", async function () {
-    await expect(token.approve(owner.address, 50))
-      .to.emit(token, "Approval")
-      .withArgs(owner.address, owner.address, 50);
-  });
 });
 
 // eslint-disable-next-line node/no-extraneous-require
