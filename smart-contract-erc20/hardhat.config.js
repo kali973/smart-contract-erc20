@@ -10,15 +10,36 @@ module.exports = {
   networks: {
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
-      accounts: [process.env.PRIVATE_KEY],
+    },
+    polygon: {
+      url: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+    },
+    optimism: {
+      url: `https://optimism-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+    },
+    arbitrum: {
+      url: `https://arbitrum-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+    },
+    palm: {
+      url: `https://palm-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+    },
+    avalanche: {
+      url: `https://avalanche-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+    },
+    nft: {
+      url: `https://nft.api.infura.io/`,
+    },
+    near: {
+      url: `https://near-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
     },
     aurora: {
       url: `https://aurora-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
-      accounts: [process.env.PRIVATE_KEY],
     },
-    optimism: {
-      url: `optimism-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
-      accounts: [process.env.PRIVATE_KEY],
+    starknet: {
+      url: `https://starknet-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+    },
+    celo: {
+      url: `https://celo-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
     },
   },
   gasReporter: {

@@ -230,7 +230,7 @@ Entrez votre clé API Etherscan, l'URL de votre nœud Ropsten (par exemple d'Alc
 enverra la transaction de déploiement. Avec un fichier .env valide en place, déployez d'abord votre contrat :
 
 ```shell
-yarn deploy:optimism
+yarn deploy:palm
 ```
 
 ```shell
