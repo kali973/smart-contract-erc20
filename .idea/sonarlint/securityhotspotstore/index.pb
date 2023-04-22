@@ -158,8 +158,6 @@ V
 &smart-contract-erc20/scripts/deploy.js,f\d\fd11d6971ec25d1f4567ed488c78593ac0f35111
 Z
 *smart-contract-erc20/contracts/Solarix.sol,7\0\7020b3930cfe29f5d55a726ec9ffcdfe3a6fd3fb
-Y
-)smart-contract-erc20/contracts/IERC20.sol,f\3\f351bbb90fb7003dcd9ec83599049995f5e9d494
 L
 python/deploySmartContrat.py,3\4\347ee7137b9299ef05d39c87b7c4276530765e06
 Å
@@ -266,10 +264,6 @@ e
 5python/smartContractDeploymentApplicationFrontBack.py,0\9\09769467df06f28a4f945c292d2ecf414e9e68a2
 B
 python/database.py,9\f\9f1678bd5b67cadf72e5df204a730e52cb96ccc6
-X
-(smart-contract-erc20/test/sample-test.js,4\f\4f715363fa700fda6f15ba56ff0c9b0781beaf0b
-B
-python/activeMQ.py,9\0\90db4ef3a3779e5da277b2f54aef85c23053a6f8
 P
  solarix/react-frontend/README.md,5\6\56a6671ce508e1fbb4d7add0d6a8b2045f9d6ced
 A
@@ -430,3 +424,21 @@ w
 G.idea/sonarlint/issuestore/b/8/b80c8e8a39807362bc446806afe72759988a7257,a\0\a02ac0a1308f728a33f231e16ebba0770b9bc548
 w
 G.idea/sonarlint/issuestore/2/c/2cb6c4803c10939f60f2d4844e60f40dad20be61,7\a\7ad7789dbae21baf5c6ea25edc60980208606150
+A
+python/hardhat.py,6\b\6bd24af25673294c9f3bb91717c2704429319bc7
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+X
+(solarix/react-frontend/package-lock.json,d\f\df6331e9109b60b6ecd9178011270d3b335faafc
+S
+#solarix/react-frontend/package.json,2\9\29b52eea0a94858c4034ec51a67d99c6069f5005
+X
+(smart-contract-erc20/test/sample-test.js,4\f\4f715363fa700fda6f15ba56ff0c9b0781beaf0b
+Y
+)smart-contract-erc20/contracts/IERC20.sol,f\3\f351bbb90fb7003dcd9ec83599049995f5e9d494
+V
+&smart-contract-erc20/hardhat.config.js,6\a\6a74087d3854059b6ee5a246bc59e7123e7b8f56
+B
+python/activeMQ.py,9\0\90db4ef3a3779e5da277b2f54aef85c23053a6f8

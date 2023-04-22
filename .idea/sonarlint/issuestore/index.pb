@@ -158,8 +158,6 @@ V
 &smart-contract-erc20/scripts/deploy.js,f\d\fd11d6971ec25d1f4567ed488c78593ac0f35111
 Z
 *smart-contract-erc20/contracts/Solarix.sol,7\0\7020b3930cfe29f5d55a726ec9ffcdfe3a6fd3fb
-Y
-)smart-contract-erc20/contracts/IERC20.sol,f\3\f351bbb90fb7003dcd9ec83599049995f5e9d494
 L
 python/deploySmartContrat.py,3\4\347ee7137b9299ef05d39c87b7c4276530765e06
 Å
@@ -266,10 +264,6 @@ e
 5python/smartContractDeploymentApplicationFrontBack.py,0\9\09769467df06f28a4f945c292d2ecf414e9e68a2
 B
 python/database.py,9\f\9f1678bd5b67cadf72e5df204a730e52cb96ccc6
-X
-(smart-contract-erc20/test/sample-test.js,4\f\4f715363fa700fda6f15ba56ff0c9b0781beaf0b
-B
-python/activeMQ.py,9\0\90db4ef3a3779e5da277b2f54aef85c23053a6f8
 A
 python/reactJS.py,0\b\0b59e24750c6d2be294a192ed2dc3e7282c3cdc8
 B
@@ -430,3 +424,21 @@ R
 "solarix/springboot-backend/pom.xml,f\f\ff7f1be5069a87e23653abc62f8397df2b277f91
 î
 dsolarix/springboot-backend/src/main/java/net/javaguides/springboot/SpringbootBackendApplication.java,4\d\4ddc10cef1be2b845a93e1d2d0433cfcce4004e0
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+X
+(solarix/react-frontend/package-lock.json,d\f\df6331e9109b60b6ecd9178011270d3b335faafc
+S
+#solarix/react-frontend/package.json,2\9\29b52eea0a94858c4034ec51a67d99c6069f5005
+A
+python/hardhat.py,6\b\6bd24af25673294c9f3bb91717c2704429319bc7
+X
+(smart-contract-erc20/test/sample-test.js,4\f\4f715363fa700fda6f15ba56ff0c9b0781beaf0b
+Y
+)smart-contract-erc20/contracts/IERC20.sol,f\3\f351bbb90fb7003dcd9ec83599049995f5e9d494
+V
+&smart-contract-erc20/hardhat.config.js,6\a\6a74087d3854059b6ee5a246bc59e7123e7b8f56
+B
+python/activeMQ.py,9\0\90db4ef3a3779e5da277b2f54aef85c23053a6f8
