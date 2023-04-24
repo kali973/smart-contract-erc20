@@ -17,6 +17,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="SonarLintModuleSettings">
-    <option name="projectKey" value="solarix" />
+    <option name="projectKey" value="smart-contract-erc20" />
   </component>
 </module>
