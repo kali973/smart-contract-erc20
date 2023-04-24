@@ -1,10 +1,8 @@
 import os
+import requests
 import subprocess
 import sys
 import time
-
-import docker
-import requests
 from tqdm import tqdm
 
 url = "https://nodejs.org/dist/v18.14.2/node-v18.14.2-x64.msi"

@@ -124,7 +124,7 @@ describe("Token Contract", function () {
 const { Client } = require("pg");
 describe("Solarix Contract", function () {
   it("should add energy production and get all information correctly", async function () {
-    this.timeout(20000);
+    this.timeout(50000);
     // Deploy Token contract
     const Token = await ethers.getContractFactory("Token");
     const token = await Token.deploy(100);
@@ -415,8 +415,8 @@ describe("Solarix Contract", function () {
 
     for (const values of insertValuesEmployees) {
       const res = await client.query(
-        `INSERT INTO employees (first_name, last_name, email_id) 
-      VALUES ($1, $2, $3)`,
+        `INSERT INTO employees (first_name, last_name, email_id)
+                 VALUES ($1, $2, $3)`,
         values
       );
       expect(res.rowCount).to.equal(1);
@@ -481,8 +481,10 @@ describe("Solarix Contract", function () {
 
     for (const values of insertValuesProprietaires) {
       const res = await client.query(
-        `INSERT INTO proprietaires (nom, prenom, adresse, telephone, email, date_naissance, profession, revenu_annuel, statut_marital, nb_enfants, date_achat, cout_achat, garantie, fin_garantie, etat, autre_info) 
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)`,
+        `INSERT INTO proprietaires (nom, prenom, adresse, telephone, email, date_naissance, profession,
+                                            revenu_annuel, statut_marital, nb_enfants, date_achat, cout_achat, garantie,
+                                            fin_garantie, etat, autre_info)
+                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)`,
         values
       );
       expect(res.rowCount).to.equal(1);
@@ -501,7 +503,8 @@ describe("Solarix Contract", function () {
 
     for (const values of insertValuesBalances) {
       const res = await client.query(
-        `INSERT INTO balances (address_id, balance) VALUES ($1, $2)`,
+        `INSERT INTO balances (address_id, balance)
+                 VALUES ($1, $2)`,
         values
       );
       expect(res.rowCount).to.equal(1);

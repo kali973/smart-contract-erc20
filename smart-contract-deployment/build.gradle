@@ -5,6 +5,9 @@ plugins {
     id 'org.web3j' version '4.9.8'    //Web3J Plugin to interact with Smart Contract
     id "org.sonarqube" version "4.0.0.2929"
 }
+bootJar {
+    duplicatesStrategy = 'exclude'
+}
 
 sonar {
     properties {

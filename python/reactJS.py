@@ -1,9 +1,9 @@
-# Recherche du fichier JAR à partir du répertoire parent courant
 import os
+import subprocess
 
 for root, dirs, files in os.walk('..'):
     for file in files:
-        if file.endswith('logo.svg'):
+        if file.endswith('serviceWorker.js'):
             jar_file = os.path.join(root, file)
             break
     else:
@@ -14,4 +14,4 @@ else:
     exit()
 
 # Exécution du fichier JAR
-os.system('npm start')
+subprocess.run('npm start', cwd=root, shell=True)

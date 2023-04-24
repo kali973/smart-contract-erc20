@@ -1,7 +1,6 @@
 import os
-import webbrowser
-
 import psycopg2
+import webbrowser
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 host = "localhost"

@@ -13,6 +13,7 @@
       <module name="com.ethereum.smart-contract-deployment" target="1.8" />
       <module name="com.ethereum.smart-contract-deployment.main" target="1.8" />
       <module name="com.ethereum.smart-contract-deployment.test" target="1.8" />
+      <module name="springboot-backend" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
