@@ -7,4 +7,9 @@ Pour plus de détails, veuillez vous référer :
 - Smart Contract [ReadMe](./smart-contract-erc20/README.md)
 - Alchemy UI [ReadMe](./alchemy-ui/README.md)
 
+Analyse de code Semgrep
+
+![img.png](smart-contract-erc20/images/img44.png)
+
+![img_1.png](smart-contract-erc20/images/img_441.png)
 ##
