@@ -19,7 +19,6 @@ else:
         print("Le fichier gradlew.bat n'a pas été trouvé dans le répertoire.")
 
 parent_dir = os.path.dirname(os.getcwd())
-
 compile_smart_contracts = input("Voulez-vous compiler les smart contracts ? (o/n) ").lower() == "o"
 
 if compile_smart_contracts:
