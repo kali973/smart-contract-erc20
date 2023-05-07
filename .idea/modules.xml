@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.ethereum.smart-contract-deployment.iml" filepath="$PROJECT_DIR$/.idea/modules/com.ethereum.smart-contract-deployment.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.ethereum.smart-contract-deployment.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.ethereum.smart-contract-deployment.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.ethereum.smart-contract-deployment.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.ethereum.smart-contract-deployment.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart-contract-deployment.iml" filepath="$PROJECT_DIR$/smart-contract-deployment.iml" />
