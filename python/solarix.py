@@ -5,11 +5,9 @@ import sys
 import time
 import webbrowser
 
-
 def a():
     # Exécution du script Python avec des privilèges d'administrateur
     os.system('start cmd /k "python smartContractDeploymentApplicationFrontBack.py"')
-
 
 import os
 
